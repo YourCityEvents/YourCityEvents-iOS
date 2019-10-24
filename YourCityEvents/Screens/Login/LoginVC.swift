@@ -23,7 +23,7 @@ extension LoginVC {
     }
     
     @IBAction func loginButtonPressed() {
-        //        self.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        self.present(MainTabController(), animated: true)
     }
 
 }

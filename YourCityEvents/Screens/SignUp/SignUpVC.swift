@@ -19,6 +19,6 @@ class SignUpVC: UIViewController {
 extension SignUpVC {
     
     @IBAction func signUpButtonPressed() {
-        
+        self.present(MainTabController(), animated: true)
     }
 }

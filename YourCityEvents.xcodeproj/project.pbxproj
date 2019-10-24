@@ -58,7 +58,7 @@
 				2E0378CF2361FEA1000BA973 /* Welcome */,
 				2E0378DF23620336000BA973 /* Login */,
 				2E0378E4236205D9000BA973 /* SignUp */,
-				2E0378E5236209A8000BA973 /* MainTabController.swift */,
+				2E0378E723620A58000BA973 /* MainTabController */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -123,6 +123,14 @@
 				2E0378E2236205D6000BA973 /* SignUpVC.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		2E0378E723620A58000BA973 /* MainTabController */ = {
+			isa = PBXGroup;
+			children = (
+				2E0378E5236209A8000BA973 /* MainTabController.swift */,
+			);
+			path = MainTabController;
 			sourceTree = "<group>";
 		};
 		2EABB9E9235D1C2D002AD930 = {

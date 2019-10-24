@@ -11,15 +11,15 @@ import UIKit
 class MainTabController: UITabBarController {
     
     private struct TabScreen {
-        let name: String
+        //let name: String
         let icon: UIImage?
         let viewController: UIViewController
     }
     
     private lazy var screens: [TabScreen] = {
-        return [TabScreen(name: "HOME", icon: UIImage(named: "orders"), viewController: UIViewController()),
-                TabScreen(name: "ADD", icon: UIImage(named: "wallet"), viewController: UIViewController()),
-                TabScreen(name: "PROFILE", icon: UIImage(named: "newOrder"), viewController: UIViewController())]
+        return [TabScreen(icon: UIImage(named: "home"), viewController: UIViewController()),
+                TabScreen(icon: UIImage(named: "add"), viewController: UIViewController()),
+                TabScreen(icon: UIImage(named: "profile"), viewController: UIViewController())]
     }()
     
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class MainTabController: UITabBarController {
             nvc.navigationBar.barStyle = .default
             nvc.navigationBar.isTranslucent = false
 //            nvc.navigationBar.barTintColor = UIColor.navigationGray
-            nvc.tabBarItem = UITabBarItem(title: screen.name, image: screen.icon, selectedImage: nil)
+            nvc.tabBarItem = UITabBarItem(title: "", image: screen.icon, selectedImage: nil)
             return nvc
         }), animated: false)
     }
