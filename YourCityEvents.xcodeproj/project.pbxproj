@@ -15,6 +15,7 @@
 		2E0378E1236205CD000BA973 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0378E0236205CD000BA973 /* SignUpVC.xib */; };
 		2E0378E3236205D6000BA973 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0378E2236205D6000BA973 /* SignUpVC.swift */; };
 		2E0378E6236209A8000BA973 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0378E5236209A8000BA973 /* MainTabController.swift */; };
+		2E0378E923620D14000BA973 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0378E823620D14000BA973 /* UIView+Extensions.swift */; };
 		2EABB9F6235D1C2D002AD930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9F5235D1C2D002AD930 /* AppDelegate.swift */; };
 		2EABB9F8235D1C2D002AD930 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9F7235D1C2D002AD930 /* WelcomeVC.swift */; };
 		2EABB9FE235D1C2D002AD930 /* YourCityEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9FC235D1C2D002AD930 /* YourCityEvents.xcdatamodeld */; };
@@ -32,6 +33,7 @@
 		2E0378E0236205CD000BA973 /* SignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		2E0378E2236205D6000BA973 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		2E0378E5236209A8000BA973 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		2E0378E823620D14000BA973 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2EABB9F2235D1C2D002AD930 /* YourCityEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourCityEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EABB9F5235D1C2D002AD930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EABB9F7235D1C2D002AD930 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 			path = MainTabController;
 			sourceTree = "<group>";
 		};
+		2E0378EA23620D18000BA973 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E0378E823620D14000BA973 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2EABB9E9235D1C2D002AD930 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 				2E0378D02361FECF000BA973 /* Resources */,
 				2EABBA01235D1C2E002AD930 /* LaunchScreen.storyboard */,
 				2EABB9FC235D1C2D002AD930 /* YourCityEvents.xcdatamodeld */,
+				2E0378EA23620D18000BA973 /* Extensions */,
 			);
 			path = YourCityEvents;
 			sourceTree = "<group>";
@@ -238,6 +249,7 @@
 				2E0378E3236205D6000BA973 /* SignUpVC.swift in Sources */,
 				2EABB9FE235D1C2D002AD930 /* YourCityEvents.xcdatamodeld in Sources */,
 				2E0378E6236209A8000BA973 /* MainTabController.swift in Sources */,
+				2E0378E923620D14000BA973 /* UIView+Extensions.swift in Sources */,
 				2EABB9F8235D1C2D002AD930 /* WelcomeVC.swift in Sources */,
 				2E0378DC23620328000BA973 /* LoginVC.swift in Sources */,
 				2EABB9F6235D1C2D002AD930 /* AppDelegate.swift in Sources */,

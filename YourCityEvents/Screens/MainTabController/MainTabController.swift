@@ -25,12 +25,18 @@ class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureAppearence()
         loadScreens()
+        configureAppearence()
     }
     
     private func configureAppearence() {
         view.backgroundColor = .white
+        let image = UIImage().createSelectionIndicator(color: UIColor.appBlue,
+                                                       size: CGSize(width: tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height-1),
+                                                       lineWidth: 2)
+        
+        
+        tabBar.selectionIndicatorImage = image.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
 //        tabBar.tintColor = UIColor.navigationGray
 //        tabBar.unselectedItemTintColor = UIColor.lightGray
     }
@@ -41,7 +47,7 @@ class MainTabController: UITabBarController {
             nvc.navigationBar.barStyle = .default
             nvc.navigationBar.isTranslucent = false
 //            nvc.navigationBar.barTintColor = UIColor.navigationGray
-            nvc.tabBarItem = UITabBarItem(title: "", image: screen.icon, selectedImage: nil)
+            nvc.tabBarItem = UITabBarItem(title: nil, image: screen.icon, selectedImage: nil)
             return nvc
         }), animated: false)
     }
