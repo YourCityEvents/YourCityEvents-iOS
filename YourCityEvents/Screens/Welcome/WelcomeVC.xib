@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeVC" customModule="YourCityEvents" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="kUg-1g-BdR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-Ip-lcv">
+                    <rect key="frame" x="57" y="98" width="300" height="127.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to YourCityEvents" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-PR-TfR">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="84.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="Duh-V7-7Dv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="36"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An app which helps you to be always informed about best events of your city" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQW-lj-Apt">
+                            <rect key="frame" x="0.0" y="84.5" width="300" height="43"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="WUN-Fk-axg"/>
+                                <constraint firstAttribute="height" constant="43" id="cqi-a6-pJQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38Q-wh-Rcw" customClass="Button" customModule="YourCityEvents" customModuleProvider="target">
+                    <rect key="frame" x="57" y="771" width="300" height="50"/>
+                    <color key="backgroundColor" red="0.14498183131217957" green="0.11021433025598526" blue="0.6353345513343811" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5GA-SA-9yh"/>
+                        <constraint firstAttribute="width" constant="300" id="q3x-l2-nk8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                    <state key="normal" title="Get started">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="getStartedPressed" destination="-1" eventType="touchUpInside" id="ANP-A7-xf6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xLS-Ip-lcv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="54" id="7Qu-7B-Net"/>
+                <constraint firstItem="38Q-wh-Rcw" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="986-DZ-eJl"/>
+                <constraint firstItem="xLS-Ip-lcv" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Qie-fY-ThG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="38Q-wh-Rcw" secondAttribute="bottom" constant="41" id="oOc-7O-cto"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+</document>
