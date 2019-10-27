@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceholderView" customModule="YourCityEvents" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="Hpm-rO-jWM" id="rsQ-YN-HiE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Hpm-rO-jWM">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="429"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Iuv-tC-MGU">
+                    <rect key="frame" x="56.5" y="148.5" width="300" height="142"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJE-HK-6XO">
+                            <rect key="frame" x="112" y="0.0" width="76.5" height="36"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="createEvent" translatesAutoresizingMaskIntoConstraints="NO" id="sZz-eZ-zVg">
+                            <rect key="frame" x="0.0" y="56" width="300" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="299.99999999999994" id="r47-dw-Qyn"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlW-du-QcA" customClass="Button" customModule="YourCityEvents" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="92" width="300" height="50"/>
+                            <color key="backgroundColor" red="0.1449818313" green="0.1102143303" blue="0.63533455130000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="Lh1-cw-IsO"/>
+                                <constraint firstAttribute="height" constant="50" id="VNN-IG-Jfo"/>
+                            </constraints>
+                            <state key="normal" title="Create event">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Iuv-tC-MGU" firstAttribute="centerX" secondItem="4II-d0-dij" secondAttribute="centerX" id="8jb-gI-HXc"/>
+                <constraint firstItem="Iuv-tC-MGU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hpm-rO-jWM" secondAttribute="top" constant="10" id="LzU-pF-nGz"/>
+                <constraint firstItem="Iuv-tC-MGU" firstAttribute="centerY" secondItem="4II-d0-dij" secondAttribute="centerY" id="doM-Yq-p29"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Iuv-tC-MGU" secondAttribute="bottom" constant="10" id="qhn-c0-59o"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="4II-d0-dij"/>
+            <point key="canvasLocation" x="155.79710144927537" y="-25.78125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="createEvent" width="374" height="229"/>
+    </resources>
+</document>
