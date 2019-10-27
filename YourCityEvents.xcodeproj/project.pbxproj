@@ -21,6 +21,14 @@
 		2EABB9FE235D1C2D002AD930 /* YourCityEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9FC235D1C2D002AD930 /* YourCityEvents.xcdatamodeld */; };
 		2EABBA00235D1C2E002AD930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EABB9FF235D1C2E002AD930 /* Assets.xcassets */; };
 		2EABBA03235D1C2E002AD930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EABBA01235D1C2E002AD930 /* LaunchScreen.storyboard */; };
+		2EE95BED2366226C000A5AFB /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95BEC2366226C000A5AFB /* FeedVC.swift */; };
+		2EE95BF02366227E000A5AFB /* FeedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE95BEF2366227E000A5AFB /* FeedVC.xib */; };
+		2EE95BF3236624B9000A5AFB /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE95BF2236624B9000A5AFB /* FeedCell.xib */; };
+		2EE95BF5236626AB000A5AFB /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95BF4236626AB000A5AFB /* FeedCell.swift */; };
+		2EE95BF723662710000A5AFB /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95BF623662710000A5AFB /* NibLoadable.swift */; };
+		2EE95BF923662739000A5AFB /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95BF823662739000A5AFB /* BaseTableViewCell.swift */; };
+		2EE95BFB2366275F000A5AFB /* BaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95BFA2366275F000A5AFB /* BaseTableHeaderFooterView.swift */; };
+		2EE95BFD23662773000A5AFB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95BFC23662773000A5AFB /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +49,14 @@
 		2EABB9FF235D1C2E002AD930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EABBA02235D1C2E002AD930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EABBA04235D1C2E002AD930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EE95BEC2366226C000A5AFB /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		2EE95BEF2366227E000A5AFB /* FeedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedVC.xib; sourceTree = "<group>"; };
+		2EE95BF2236624B9000A5AFB /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		2EE95BF4236626AB000A5AFB /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		2EE95BF623662710000A5AFB /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		2EE95BF823662739000A5AFB /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		2EE95BFA2366275F000A5AFB /* BaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
+		2EE95BFC23662773000A5AFB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +77,7 @@
 				2E0378DF23620336000BA973 /* Login */,
 				2E0378E4236205D9000BA973 /* SignUp */,
 				2E0378E723620A58000BA973 /* MainTabController */,
+				2EE95BEE23662272000A5AFB /* FeedVC */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -105,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				2E0378D6236201F0000BA973 /* Button.swift */,
+				2EE95BFE2366277C000A5AFB /* Base */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +191,44 @@
 			path = YourCityEvents;
 			sourceTree = "<group>";
 		};
+		2EE95BEE23662272000A5AFB /* FeedVC */ = {
+			isa = PBXGroup;
+			children = (
+				2EE95BF1236624A7000A5AFB /* Controller */,
+				2EE95BFF236627F3000A5AFB /* Cell */,
+			);
+			path = FeedVC;
+			sourceTree = "<group>";
+		};
+		2EE95BF1236624A7000A5AFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2EE95BEC2366226C000A5AFB /* FeedVC.swift */,
+				2EE95BEF2366227E000A5AFB /* FeedVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2EE95BFE2366277C000A5AFB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2EE95BF623662710000A5AFB /* NibLoadable.swift */,
+				2EE95BF823662739000A5AFB /* BaseTableViewCell.swift */,
+				2EE95BFC23662773000A5AFB /* ReusableView.swift */,
+				2EE95BFA2366275F000A5AFB /* BaseTableHeaderFooterView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2EE95BFF236627F3000A5AFB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2EE95BF2236624B9000A5AFB /* FeedCell.xib */,
+				2EE95BF4236626AB000A5AFB /* FeedCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,6 +291,8 @@
 				2E0378CD2361FE7E000BA973 /* WelcomeVC.xib in Resources */,
 				2E0378E1236205CD000BA973 /* SignUpVC.xib in Resources */,
 				2E0378DE23620332000BA973 /* LoginVC.xib in Resources */,
+				2EE95BF02366227E000A5AFB /* FeedVC.xib in Resources */,
+				2EE95BF3236624B9000A5AFB /* FeedCell.xib in Resources */,
 				2EABBA00235D1C2E002AD930 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,12 +306,18 @@
 			files = (
 				2E0378E3236205D6000BA973 /* SignUpVC.swift in Sources */,
 				2EABB9FE235D1C2D002AD930 /* YourCityEvents.xcdatamodeld in Sources */,
+				2EE95BED2366226C000A5AFB /* FeedVC.swift in Sources */,
 				2E0378E6236209A8000BA973 /* MainTabController.swift in Sources */,
+				2EE95BFB2366275F000A5AFB /* BaseTableHeaderFooterView.swift in Sources */,
+				2EE95BF5236626AB000A5AFB /* FeedCell.swift in Sources */,
+				2EE95BFD23662773000A5AFB /* ReusableView.swift in Sources */,
 				2E0378E923620D14000BA973 /* UIView+Extensions.swift in Sources */,
 				2EABB9F8235D1C2D002AD930 /* WelcomeVC.swift in Sources */,
 				2E0378DC23620328000BA973 /* LoginVC.swift in Sources */,
 				2EABB9F6235D1C2D002AD930 /* AppDelegate.swift in Sources */,
+				2EE95BF723662710000A5AFB /* NibLoadable.swift in Sources */,
 				2E0378DA23620223000BA973 /* Color.swift in Sources */,
+				2EE95BF923662739000A5AFB /* BaseTableViewCell.swift in Sources */,
 				2E0378D7236201F0000BA973 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="kto-UM-cDO" customClass="FeedCell" customModule="YourCityEvents" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kto-UM-cDO" id="ehP-uR-xgx">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="139.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rwx-pk-gbK">
+                        <rect key="frame" x="18" y="8" width="378" height="123.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="PM4-tS-q7n">
+                                <rect key="frame" x="15" y="12" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0U8-K0-8eh"/>
+                                    <constraint firstAttribute="width" constant="100" id="qzl-7P-noK"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q9N-2z-V5i">
+                                <rect key="frame" x="130" y="15" width="233" height="94"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hfc-8k-e3S">
+                                        <rect key="frame" x="0.0" y="0.0" width="63" height="15"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="date" translatesAutoresizingMaskIntoConstraints="NO" id="SMJ-oK-b0a">
+                                                <rect key="frame" x="0.0" y="0.0" width="13" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="MMc-VU-dWm"/>
+                                                    <constraint firstAttribute="width" constant="13" id="qkU-IG-jTv"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3z-Nh-4Rz">
+                                                <rect key="frame" x="21" y="0.0" width="42" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presentation of new Apple device" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1R-wW-DVh">
+                                        <rect key="frame" x="0.0" y="23" width="166" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kyiv, Ukraine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUH-Ai-IyO">
+                                        <rect key="frame" x="0.0" y="73.5" width="98" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="123.5" id="BCl-F2-f0E"/>
+                            <constraint firstAttribute="trailing" secondItem="Q9N-2z-V5i" secondAttribute="trailing" constant="15" id="LBf-Hc-tyR"/>
+                            <constraint firstItem="PM4-tS-q7n" firstAttribute="leading" secondItem="Rwx-pk-gbK" secondAttribute="leading" constant="15" id="bge-xm-kMt"/>
+                            <constraint firstItem="PM4-tS-q7n" firstAttribute="centerY" secondItem="Rwx-pk-gbK" secondAttribute="centerY" id="cB2-b3-jKD"/>
+                            <constraint firstItem="Q9N-2z-V5i" firstAttribute="leading" secondItem="PM4-tS-q7n" secondAttribute="trailing" constant="15" id="eVn-CE-ozo"/>
+                            <constraint firstItem="Q9N-2z-V5i" firstAttribute="centerY" secondItem="PM4-tS-q7n" secondAttribute="centerY" id="mBu-mn-lzL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Rwx-pk-gbK" firstAttribute="leading" secondItem="ehP-uR-xgx" secondAttribute="leading" constant="18" id="5dd-Cb-nsz"/>
+                    <constraint firstItem="Rwx-pk-gbK" firstAttribute="top" secondItem="ehP-uR-xgx" secondAttribute="top" constant="8" id="MEG-ac-3gl"/>
+                    <constraint firstAttribute="trailing" secondItem="Rwx-pk-gbK" secondAttribute="trailing" constant="18" id="Nxq-6u-DSL"/>
+                    <constraint firstAttribute="bottom" secondItem="Rwx-pk-gbK" secondAttribute="bottom" constant="8" id="dR7-1f-sOW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="dateLabel" destination="G3z-Nh-4Rz" id="ojP-8o-SrO"/>
+                <outlet property="eventImageView" destination="PM4-tS-q7n" id="2w8-fb-e2E"/>
+                <outlet property="locationLabel" destination="XUH-Ai-IyO" id="3HP-mZ-tFy"/>
+                <outlet property="myContentView" destination="Rwx-pk-gbK" id="KDa-Ue-YN1"/>
+                <outlet property="titleLabel" destination="L1R-wW-DVh" id="ZUS-jY-fVW"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="182.8125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="date" width="14" height="15"/>
+        <image name="welcome" width="375" height="325"/>
+    </resources>
+</document>

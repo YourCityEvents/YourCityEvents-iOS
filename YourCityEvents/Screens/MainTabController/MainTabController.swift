@@ -17,7 +17,7 @@ class MainTabController: UITabBarController {
     }
     
     private lazy var screens: [TabScreen] = {
-        return [TabScreen(icon: UIImage(named: "home"), viewController: UIViewController()),
+        return [TabScreen(icon: UIImage(named: "home"), viewController: FeedVC()),
                 TabScreen(icon: UIImage(named: "add"), viewController: UIViewController()),
                 TabScreen(icon: UIImage(named: "profile"), viewController: UIViewController())]
     }()
