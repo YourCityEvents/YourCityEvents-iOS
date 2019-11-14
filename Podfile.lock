@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManagerSwift (6.4.2)
+  - SVProgressHUD (2.2.5)
+  - SwiftKeychainWrapper (3.4.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - SVProgressHUD
+  - SwiftKeychainWrapper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManagerSwift
+    - SVProgressHUD
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+
+PODFILE CHECKSUM: 4bb813387f0ab01d3605b910a47dd9bdbda8db79
+
+COCOAPODS: 1.7.5
