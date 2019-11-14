@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.rootViewController = WelcomeVC()
             window.makeKeyAndVisible()
         }
-        
+        IQKeyboardManager.shared().isEnabled = true
+
         return true
     }
 
