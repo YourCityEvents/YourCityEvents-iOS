@@ -16,6 +16,7 @@
 		2E0378E3236205D6000BA973 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0378E2236205D6000BA973 /* SignUpVC.swift */; };
 		2E0378E6236209A8000BA973 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0378E5236209A8000BA973 /* MainTabController.swift */; };
 		2E0378E923620D14000BA973 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0378E823620D14000BA973 /* UIView+Extensions.swift */; };
+		2E1DA3A1237D9D4B00B5F73B /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1DA3A0237D9D4B00B5F73B /* ShadowView.swift */; };
 		2EABB9F6235D1C2D002AD930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9F5235D1C2D002AD930 /* AppDelegate.swift */; };
 		2EABB9F8235D1C2D002AD930 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9F7235D1C2D002AD930 /* WelcomeVC.swift */; };
 		2EABB9FE235D1C2D002AD930 /* YourCityEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9FC235D1C2D002AD930 /* YourCityEvents.xcdatamodeld */; };
@@ -33,8 +34,6 @@
 		2EE95C0323662D75000A5AFB /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE95C0223662D75000A5AFB /* ProfileVC.xib */; };
 		2EE95C0723662DD9000A5AFB /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE95C0623662DD9000A5AFB /* UserCell.xib */; };
 		2EE95C0923662DE3000A5AFB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95C0823662DE3000A5AFB /* UserCell.swift */; };
-		2EE95C0C23663391000A5AFB /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95C0B23663391000A5AFB /* PlaceholderView.swift */; };
-		2EE95C0E236633AB000A5AFB /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE95C0D236633AB000A5AFB /* PlaceholderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +47,7 @@
 		2E0378E2236205D6000BA973 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		2E0378E5236209A8000BA973 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		2E0378E823620D14000BA973 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		2E1DA3A0237D9D4B00B5F73B /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		2EABB9F2235D1C2D002AD930 /* YourCityEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourCityEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EABB9F5235D1C2D002AD930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EABB9F7235D1C2D002AD930 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -67,8 +67,6 @@
 		2EE95C0223662D75000A5AFB /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		2EE95C0623662DD9000A5AFB /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		2EE95C0823662DE3000A5AFB /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		2EE95C0B23663391000A5AFB /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
-		2EE95C0D236633AB000A5AFB /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +134,7 @@
 			children = (
 				2E0378D6236201F0000BA973 /* Button.swift */,
 				2EE95BFE2366277C000A5AFB /* Base */,
-				2EE95C0F236633B4000A5AFB /* Placeholder */,
+				2E1DA3A0237D9D4B00B5F73B /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,15 +268,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		2EE95C0F236633B4000A5AFB /* Placeholder */ = {
-			isa = PBXGroup;
-			children = (
-				2EE95C0B23663391000A5AFB /* PlaceholderView.swift */,
-				2EE95C0D236633AB000A5AFB /* PlaceholderView.xib */,
-			);
-			path = Placeholder;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,7 +326,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE95C0E236633AB000A5AFB /* PlaceholderView.xib in Resources */,
 				2EE95C0323662D75000A5AFB /* ProfileVC.xib in Resources */,
 				2EABBA03235D1C2E002AD930 /* LaunchScreen.storyboard in Resources */,
 				2E0378CD2361FE7E000BA973 /* WelcomeVC.xib in Resources */,
@@ -364,8 +352,8 @@
 				2EE95C0923662DE3000A5AFB /* UserCell.swift in Sources */,
 				2EE95C0123662D55000A5AFB /* ProfileVC.swift in Sources */,
 				2EE95BFB2366275F000A5AFB /* BaseTableHeaderFooterView.swift in Sources */,
+				2E1DA3A1237D9D4B00B5F73B /* ShadowView.swift in Sources */,
 				2EE95BF5236626AB000A5AFB /* FeedCell.swift in Sources */,
-				2EE95C0C23663391000A5AFB /* PlaceholderView.swift in Sources */,
 				2EE95BFD23662773000A5AFB /* ReusableView.swift in Sources */,
 				2E0378E923620D14000BA973 /* UIView+Extensions.swift in Sources */,
 				2EABB9F8235D1C2D002AD930 /* WelcomeVC.swift in Sources */,
