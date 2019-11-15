@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedVC" customModule="YourCityEvents" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="qAc-oB-4Y7" id="xWr-ua-WFB"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7yc-wT-Y7d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedBackground" translatesAutoresizingMaskIntoConstraints="NO" id="2Qf-dG-Qim">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qAc-oB-4Y7">
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming events in Kyiv" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dq-pw-hnq">
+                    <rect key="frame" x="20" y="59" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2Qf-dG-Qim" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="10h-DQ-bAC"/>
+                <constraint firstItem="5Dq-pw-hnq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="3sQ-PN-lCv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Dq-pw-hnq" secondAttribute="trailing" constant="20" id="FhB-LH-shZ"/>
+                <constraint firstAttribute="bottom" secondItem="2Qf-dG-Qim" secondAttribute="bottom" id="Ifw-l5-48e"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2Qf-dG-Qim" secondAttribute="trailing" id="THy-M8-oEf"/>
+                <constraint firstItem="qAc-oB-4Y7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aE6-g7-SRA"/>
+                <constraint firstItem="2Qf-dG-Qim" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bY4-e2-IxD"/>
+                <constraint firstItem="5Dq-pw-hnq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="cfa-NA-Mzm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qAc-oB-4Y7" secondAttribute="bottom" id="jz6-G3-Cbv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qAc-oB-4Y7" secondAttribute="trailing" id="qt7-cb-1dO"/>
+                <constraint firstItem="qAc-oB-4Y7" firstAttribute="top" secondItem="5Dq-pw-hnq" secondAttribute="bottom" constant="15" id="xUM-u3-Jv6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="47.826086956521742" y="38.839285714285715"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="feedBackground" width="375" height="651"/>
+    </resources>
+</document>

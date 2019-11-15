@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputView" customModule="YourCityEvents" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="fif-o7-1te" id="IBn-PP-Rlq"/>
+                <outlet property="ivPrivace" destination="Khq-Yi-Xn5" id="qpY-ij-DnL"/>
+                <outlet property="lErrorMassage" destination="ylL-nI-iz6" id="nr7-DA-l84"/>
+                <outlet property="lHelperText" destination="F23-i7-ir0" id="pW2-FD-sa9"/>
+                <outlet property="lcHelperTextWidth" destination="pdr-a2-CZ8" id="nAE-wh-AXj"/>
+                <outlet property="tfContent" destination="0aw-h5-07V" id="nmf-PE-cXQ"/>
+                <outlet property="vWhite" destination="cnh-3e-vW2" id="XCI-OS-Ay3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eNM-CC-f70">
+            <rect key="frame" x="0.0" y="0.0" width="510" height="114"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fif-o7-1te">
+                    <rect key="frame" x="0.0" y="0.0" width="510" height="114"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-nI-iz6">
+                            <rect key="frame" x="15" y="100" width="480" height="14"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                            <color key="textColor" name="EF1010_RedRibbon"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnh-3e-vW2">
+                            <rect key="frame" x="0.0" y="0.0" width="510" height="98"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0aw-h5-07V">
+                                    <rect key="frame" x="20" y="39.5" width="436" height="19"/>
+                                    <color key="textColor" name="2D2D2D_Mine Shaft"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.2Eye" translatesAutoresizingMaskIntoConstraints="NO" id="Khq-Yi-Xn5">
+                                    <rect key="frame" x="466" y="37" width="24" height="24"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F23-i7-ir0">
+                                    <rect key="frame" x="15" y="49" width="0.0" height="0.0"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" id="pdr-a2-CZ8"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                    <color key="textColor" name="333333_MineShaft"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Khq-Yi-Xn5" firstAttribute="leading" secondItem="0aw-h5-07V" secondAttribute="trailing" constant="10" id="DGr-TB-D2O"/>
+                                <constraint firstItem="0aw-h5-07V" firstAttribute="centerY" secondItem="cnh-3e-vW2" secondAttribute="centerY" id="Fnz-Yv-duo"/>
+                                <constraint firstItem="F23-i7-ir0" firstAttribute="centerY" secondItem="cnh-3e-vW2" secondAttribute="centerY" id="aD7-1E-SB6"/>
+                                <constraint firstAttribute="trailing" secondItem="Khq-Yi-Xn5" secondAttribute="trailing" constant="20" id="krF-pU-qlc"/>
+                                <constraint firstItem="F23-i7-ir0" firstAttribute="leading" secondItem="cnh-3e-vW2" secondAttribute="leading" constant="15" id="lI0-LE-0mL"/>
+                                <constraint firstItem="Khq-Yi-Xn5" firstAttribute="centerY" secondItem="cnh-3e-vW2" secondAttribute="centerY" id="tSZ-dx-XJN"/>
+                                <constraint firstItem="0aw-h5-07V" firstAttribute="leading" secondItem="F23-i7-ir0" secondAttribute="trailing" constant="5" id="xzD-wD-9se"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="DFDFDF_Alto"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cnh-3e-vW2" secondAttribute="bottom" constant="16" id="1rw-nv-2dY"/>
+                        <constraint firstAttribute="trailing" secondItem="cnh-3e-vW2" secondAttribute="trailing" id="8pn-36-RGk"/>
+                        <constraint firstAttribute="trailing" secondItem="ylL-nI-iz6" secondAttribute="trailing" constant="15" id="N1N-6O-jXL"/>
+                        <constraint firstItem="cnh-3e-vW2" firstAttribute="leading" secondItem="fif-o7-1te" secondAttribute="leading" id="SLO-Eb-MEA"/>
+                        <constraint firstAttribute="bottom" secondItem="ylL-nI-iz6" secondAttribute="bottom" id="beQ-NG-e2i"/>
+                        <constraint firstItem="cnh-3e-vW2" firstAttribute="top" secondItem="fif-o7-1te" secondAttribute="top" id="fN4-7Z-JbS"/>
+                        <constraint firstItem="ylL-nI-iz6" firstAttribute="leading" secondItem="fif-o7-1te" secondAttribute="leading" constant="15" id="osa-eU-yqv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fif-o7-1te" firstAttribute="top" secondItem="eNM-CC-f70" secondAttribute="top" id="2TK-EG-ZdU"/>
+                <constraint firstAttribute="bottom" secondItem="fif-o7-1te" secondAttribute="bottom" id="7MU-kT-CEG"/>
+                <constraint firstItem="fif-o7-1te" firstAttribute="leading" secondItem="Vau-Oh-LY6" secondAttribute="leading" id="VHm-Ln-dt1"/>
+                <constraint firstItem="Vau-Oh-LY6" firstAttribute="trailing" secondItem="fif-o7-1te" secondAttribute="trailing" id="cmx-5v-WbE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Vau-Oh-LY6"/>
+            <point key="canvasLocation" x="207.24637681159422" y="-174.10714285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="0.2Eye" width="24" height="24"/>
+        <namedColor name="2D2D2D_Mine Shaft">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="333333_MineShaft">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DFDFDF_Alto">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="EF1010_RedRibbon">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,5 +1,5 @@
 PODS:
-  - IQKeyboardManagerSwift (6.4.2)
+  - IQKeyboardManagerSwift (6.5.4)
   - SVProgressHUD (2.2.5)
   - SwiftKeychainWrapper (3.4.0)
 
@@ -15,7 +15,7 @@ SPEC REPOS:
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
-  IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
