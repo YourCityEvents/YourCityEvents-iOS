@@ -40,6 +40,10 @@
 		2E66CCA6237EEA2000A74F45 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66CCA5237EEA2000A74F45 /* Router.swift */; };
 		2E66CCA9237EEE5800A74F45 /* PWelcomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66CCA8237EEE5800A74F45 /* PWelcomeVM.swift */; };
 		2E66CCAB237EEE8900A74F45 /* WelcomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66CCAA237EEE8900A74F45 /* WelcomeVM.swift */; };
+		2E66CCAF237F5CF100A74F45 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66CCAE237F5CF100A74F45 /* TableViewController.swift */; };
+		2E66CCB1237F5D1100A74F45 /* PTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66CCB0237F5D1100A74F45 /* PTableViewCellModel.swift */; };
+		2E66CCB3237F5D3300A74F45 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66CCB2237F5D3300A74F45 /* TableViewCell.swift */; };
+		2E66CCB5237F5D4C00A74F45 /* PTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66CCB4237F5D4C00A74F45 /* PTableViewModel.swift */; };
 		2EABB9F6235D1C2D002AD930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9F5235D1C2D002AD930 /* AppDelegate.swift */; };
 		2EABB9F8235D1C2D002AD930 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9F7235D1C2D002AD930 /* WelcomeVC.swift */; };
 		2EABB9FE235D1C2D002AD930 /* YourCityEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9FC235D1C2D002AD930 /* YourCityEvents.xcdatamodeld */; };
@@ -93,6 +97,10 @@
 		2E66CCA5237EEA2000A74F45 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2E66CCA8237EEE5800A74F45 /* PWelcomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWelcomeVM.swift; sourceTree = "<group>"; };
 		2E66CCAA237EEE8900A74F45 /* WelcomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVM.swift; sourceTree = "<group>"; };
+		2E66CCAE237F5CF100A74F45 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2E66CCB0237F5D1100A74F45 /* PTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTableViewCellModel.swift; sourceTree = "<group>"; };
+		2E66CCB2237F5D3300A74F45 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2E66CCB4237F5D4C00A74F45 /* PTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTableViewModel.swift; sourceTree = "<group>"; };
 		2EABB9F2235D1C2D002AD930 /* YourCityEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourCityEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EABB9F5235D1C2D002AD930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EABB9F7235D1C2D002AD930 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -294,6 +302,7 @@
 		2E66CC9C237EE45B00A74F45 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2E66CCB6237F5D5800A74F45 /* TableView */,
 				2E66CC9A237EE41C00A74F45 /* ViewController.swift */,
 			);
 			path = Common;
@@ -350,6 +359,26 @@
 				2E66CCAA237EEE8900A74F45 /* WelcomeVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2E66CCAD237F5CC800A74F45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EE95BF2236624B9000A5AFB /* FeedCell.xib */,
+				2EE95BF4236626AB000A5AFB /* FeedCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E66CCB6237F5D5800A74F45 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				2E66CCAE237F5CF100A74F45 /* TableViewController.swift */,
+				2E66CCB0237F5D1100A74F45 /* PTableViewCellModel.swift */,
+				2E66CCB2237F5D3300A74F45 /* TableViewCell.swift */,
+				2E66CCB4237F5D4C00A74F45 /* PTableViewModel.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		2EABB9E9235D1C2D002AD930 = {
@@ -420,8 +449,7 @@
 		2EE95BFF236627F3000A5AFB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2EE95BF2236624B9000A5AFB /* FeedCell.xib */,
-				2EE95BF4236626AB000A5AFB /* FeedCell.swift */,
+				2E66CCAD237F5CC800A74F45 /* View */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -595,6 +623,7 @@
 				2E0378E3236205D6000BA973 /* SignUpVC.swift in Sources */,
 				2E66CCAB237EEE8900A74F45 /* WelcomeVM.swift in Sources */,
 				2E66CC8B237ECD7F00A74F45 /* EmailValidator.swift in Sources */,
+				2E66CCAF237F5CF100A74F45 /* TableViewController.swift in Sources */,
 				2EABB9FE235D1C2D002AD930 /* YourCityEvents.xcdatamodeld in Sources */,
 				2EE95BED2366226C000A5AFB /* FeedVC.swift in Sources */,
 				2E66CC84237ECCFA00A74F45 /* XibView.swift in Sources */,
@@ -624,9 +653,12 @@
 				2EABB9F6235D1C2D002AD930 /* AppDelegate.swift in Sources */,
 				2EE95BF723662710000A5AFB /* NibLoadable.swift in Sources */,
 				2E66CC9B237EE41C00A74F45 /* ViewController.swift in Sources */,
+				2E66CCB3237F5D3300A74F45 /* TableViewCell.swift in Sources */,
 				2E1DA3AD237DA09C00B5F73B /* Config.swift in Sources */,
 				2E1DA3AA237DA07500B5F73B /* Response.swift in Sources */,
 				2E1DA3B0237DA10400B5F73B /* User.swift in Sources */,
+				2E66CCB5237F5D4C00A74F45 /* PTableViewModel.swift in Sources */,
+				2E66CCB1237F5D1100A74F45 /* PTableViewCellModel.swift in Sources */,
 				2E0378DA23620223000BA973 /* Color.swift in Sources */,
 				2E66CC93237ED25300A74F45 /* UIView+Extensions.swift in Sources */,
 				2EE95BF923662739000A5AFB /* BaseTableViewCell.swift in Sources */,
