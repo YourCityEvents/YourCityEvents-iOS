@@ -240,23 +240,23 @@
 			children = (
 				2E1DA3A4237DA02400B5F73B /* Networking.swift */,
 				2E1DA3A7237DA04A00B5F73B /* APIFacade.swift */,
-				2E1DA3AB237DA07D00B5F73B /* Models */,
+				2E1DA3AB237DA07D00B5F73B /* CodableModels */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		2E1DA3AB237DA07D00B5F73B /* Models */ = {
+		2E1DA3AB237DA07D00B5F73B /* CodableModels */ = {
 			isa = PBXGroup;
 			children = (
 				2E1DA3A9237DA07500B5F73B /* Response.swift */,
 			);
-			path = Models;
+			path = CodableModels;
 			sourceTree = "<group>";
 		};
 		2E1DA3AE237DA0F200B5F73B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2E1DA3AF237DA10400B5F73B /* User.swift */,
+				2E66CCB7237F635300A74F45 /* User */,
 				2E1DA3A6237DA02E00B5F73B /* Networking */,
 			);
 			path = Model;
@@ -379,6 +379,14 @@
 				2E66CCB4237F5D4C00A74F45 /* PTableViewModel.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		2E66CCB7237F635300A74F45 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2E1DA3AF237DA10400B5F73B /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		2EABB9E9235D1C2D002AD930 = {
