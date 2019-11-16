@@ -52,6 +52,10 @@
 		2EABB9FE235D1C2D002AD930 /* YourCityEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EABB9FC235D1C2D002AD930 /* YourCityEvents.xcdatamodeld */; };
 		2EABBA00235D1C2E002AD930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EABB9FF235D1C2E002AD930 /* Assets.xcassets */; };
 		2EABBA03235D1C2E002AD930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EABBA01235D1C2E002AD930 /* LaunchScreen.storyboard */; };
+		2EAE6CF823808E7100D4B867 /* PFeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE6CF723808E7100D4B867 /* PFeedCellViewModel.swift */; };
+		2EAE6CFA23808EC700D4B867 /* FeedCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE6CF923808EC700D4B867 /* FeedCellModel.swift */; };
+		2EAE6CFD2380903200D4B867 /* FeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE6CFC2380903200D4B867 /* FeedVM.swift */; };
+		2EAE6CFF2380903B00D4B867 /* PFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE6CFE2380903B00D4B867 /* PFeedVM.swift */; };
 		2EE95BED2366226C000A5AFB /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE95BEC2366226C000A5AFB /* FeedVC.swift */; };
 		2EE95BF02366227E000A5AFB /* FeedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE95BEF2366227E000A5AFB /* FeedVC.xib */; };
 		2EE95BF3236624B9000A5AFB /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE95BF2236624B9000A5AFB /* FeedCell.xib */; };
@@ -114,6 +118,10 @@
 		2EABB9FF235D1C2E002AD930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EABBA02235D1C2E002AD930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EABBA04235D1C2E002AD930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EAE6CF723808E7100D4B867 /* PFeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFeedCellViewModel.swift; sourceTree = "<group>"; };
+		2EAE6CF923808EC700D4B867 /* FeedCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellModel.swift; sourceTree = "<group>"; };
+		2EAE6CFC2380903200D4B867 /* FeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVM.swift; sourceTree = "<group>"; };
+		2EAE6CFE2380903B00D4B867 /* PFeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFeedVM.swift; sourceTree = "<group>"; };
 		2EE95BEC2366226C000A5AFB /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		2EE95BEF2366227E000A5AFB /* FeedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedVC.xib; sourceTree = "<group>"; };
 		2EE95BF2236624B9000A5AFB /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
@@ -434,22 +442,41 @@
 			path = YourCityEvents;
 			sourceTree = "<group>";
 		};
+		2EAE6CFB23808FB000D4B867 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EAE6CF723808E7100D4B867 /* PFeedCellViewModel.swift */,
+				2EAE6CF923808EC700D4B867 /* FeedCellModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2EAE6D002380903E00D4B867 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EAE6CFC2380903200D4B867 /* FeedVM.swift */,
+				2EAE6CFE2380903B00D4B867 /* PFeedVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2EE95BEE23662272000A5AFB /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				2EE95BF1236624A7000A5AFB /* Controller */,
+				2EAE6D002380903E00D4B867 /* ViewModel */,
+				2EE95BF1236624A7000A5AFB /* View */,
 				2EE95BFF236627F3000A5AFB /* Cell */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
 		};
-		2EE95BF1236624A7000A5AFB /* Controller */ = {
+		2EE95BF1236624A7000A5AFB /* View */ = {
 			isa = PBXGroup;
 			children = (
 				2EE95BEC2366226C000A5AFB /* FeedVC.swift */,
 				2EE95BEF2366227E000A5AFB /* FeedVC.xib */,
 			);
-			path = Controller;
+			path = View;
 			sourceTree = "<group>";
 		};
 		2EE95BFE2366277C000A5AFB /* Base */ = {
@@ -467,6 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				2E66CCAD237F5CC800A74F45 /* View */,
+				2EAE6CFB23808FB000D4B867 /* ViewModel */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -653,13 +681,16 @@
 				2E66CCA3237EE70500A74F45 /* SignUpVM.swift in Sources */,
 				2E66CCA9237EEE5800A74F45 /* PWelcomeVM.swift in Sources */,
 				2E66CC88237ECD5900A74F45 /* PValidator.swift in Sources */,
+				2EAE6CFD2380903200D4B867 /* FeedVM.swift in Sources */,
 				2E1DA3A1237D9D4B00B5F73B /* ShadowView.swift in Sources */,
 				2EE95BF5236626AB000A5AFB /* FeedCell.swift in Sources */,
 				2E1DA3A3237D9FA200B5F73B /* UIFont+Extensions.swift in Sources */,
 				2EE95BFD23662773000A5AFB /* ReusableView.swift in Sources */,
 				2E1DA3A5237DA02400B5F73B /* Networking.swift in Sources */,
+				2EAE6CF823808E7100D4B867 /* PFeedCellViewModel.swift in Sources */,
 				2E66CC86237ECD3300A74F45 /* InputView.swift in Sources */,
 				2E66CC8D237ECD9400A74F45 /* PasswordValidator.swift in Sources */,
+				2EAE6CFF2380903B00D4B867 /* PFeedVM.swift in Sources */,
 				2E0378E923620D14000BA973 /* UIImageView+Extensions.swift in Sources */,
 				2E1DA3A8237DA04A00B5F73B /* APIFacade.swift in Sources */,
 				2E66CCB9238015C500A74F45 /* AuthModels.swift in Sources */,
@@ -673,6 +704,7 @@
 				2EE95BF723662710000A5AFB /* NibLoadable.swift in Sources */,
 				2E66CC9B237EE41C00A74F45 /* ViewController.swift in Sources */,
 				2E66CCB3237F5D3300A74F45 /* TableViewCell.swift in Sources */,
+				2EAE6CFA23808EC700D4B867 /* FeedCellModel.swift in Sources */,
 				2E66CCBB2380163D00A74F45 /* CityModel.swift in Sources */,
 				2E1DA3AD237DA09C00B5F73B /* Config.swift in Sources */,
 				2E1DA3AA237DA07500B5F73B /* Response.swift in Sources */,

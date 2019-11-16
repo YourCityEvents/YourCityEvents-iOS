@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedVC" customModule="YourCityEvents" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="qAc-oB-4Y7" id="xWr-ua-WFB"/>
+                <outlet property="tableView" destination="qAc-oB-4Y7" id="RtL-aX-jSz"/>
                 <outlet property="view" destination="iN0-l3-epB" id="7yc-wT-Y7d"/>
             </connections>
         </placeholder>

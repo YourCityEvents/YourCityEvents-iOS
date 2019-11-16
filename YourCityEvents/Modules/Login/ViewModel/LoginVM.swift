@@ -18,13 +18,13 @@ class LoginVM: PLoginVM {
     }
     
     func loginUser(_ login: String?, pass: String?) {
-        let emailValidator = EmailValidator()
-        let passwordValidator = PasswordValidator()
-        if !emailValidator.validate(login) || !passwordValidator.validate(pass) {
-            let error = NSError(domain:"", code:401, userInfo:[NSLocalizedDescriptionKey: "Please, enter login and password first"])
-            callbackOnError?(error)
-        }else {
+//        let emailValidator = EmailValidator()
+//        let passwordValidator = PasswordValidator()
+//        if !emailValidator.validate(login) || !passwordValidator.validate(pass) {
+//            let error = NSError(domain:"", code:401, userInfo:[NSLocalizedDescriptionKey: "Please, enter login and password first"])
+//            callbackOnError?(error)
+//        }else {
             Router.showTabBarController()
-        }
+//        }
     }
 }
