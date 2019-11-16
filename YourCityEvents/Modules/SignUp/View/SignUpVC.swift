@@ -19,6 +19,27 @@ class SignUpVC: ViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    private func configure() {
+        guard var model = viewModel as? PSignUpVM else { return }
+        model.callBackOnError = { [weak self] error in
+            self?.show(error: error)
+        }
+        model.callback = { [weak self] in
+            self?.clearUserData()
+        }
+    }
+}
+
+//MARK: - Main
+extension SignUpVC {
+    private func clearUserData() {
+        firstNameTextField.text = nil
+        lastNameTextField.text = nil
+        emailTextField.text = nil
+        passwordTextField.text = nil
     }
 }
 
@@ -27,6 +48,6 @@ extension SignUpVC {
     
     @IBAction func signUpButtonPressed() {
         guard let model = viewModel as? PSignUpVM else { return }
-        model.signUp(nil, nil, nil, pass: nil)
+        model.signUp(firstNameTextField.text, lastNameTextField.text, emailTextField.text, pass: passwordTextField.text)
     }
 }

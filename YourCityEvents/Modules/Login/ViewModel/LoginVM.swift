@@ -7,19 +7,24 @@
 //
 
 import Foundation
-enum PLoginVCState {
-    case cleanLogin
-    case cleanRegistration
-}
 
 class LoginVM: PLoginVM {
+    
+    var callbackOnError: ((Error) -> ())?
+    var callback: (() -> Void)?
     
     func signUpPressed() {
         Router.showSignUpController()
     }
     
-    var callback: ((PLoginVCState) -> Void)?
     func loginUser(_ login: String?, pass: String?) {
-        Router.showTabBarController()
+        let emailValidator = EmailValidator()
+        let passwordValidator = PasswordValidator()
+        if !emailValidator.validate(login) || !passwordValidator.validate(pass) {
+            let error = NSError(domain:"", code:401, userInfo:[NSLocalizedDescriptionKey: "Please, enter login and password first"])
+            callbackOnError?(error)
+        }else {
+            Router.showTabBarController()
+        }
     }
 }

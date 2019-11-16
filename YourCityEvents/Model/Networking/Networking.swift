@@ -153,12 +153,12 @@ class NetworkingService {
     private func request(to endpoint: Endpoint, with data: Data?, responseHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         var request = URLRequest(url: endpoint.url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        if let token = User.current?.token {
-//            print("Using token:", token)
-//            request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
-//        } else {
-//            print("No token")
-//        }
+        if let token = User.current?.token {
+            print("Using token:", token)
+            request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+        } else {
+            print("No token")
+        }
         request.httpMethod = endpoint.method.rawValue
         request.httpBody = data
         urlSession.dataTask(with: request, completionHandler: { (data, response, error) in

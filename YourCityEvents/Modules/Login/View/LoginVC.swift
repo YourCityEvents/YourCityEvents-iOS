@@ -18,7 +18,23 @@ class LoginVC: ViewController {
     }
     
     private func configure() {
-//        guard var model = viewModel as? PLoginVM else { return }
+        guard var model = viewModel as? PLoginVM else { return }
+        model.callback = { [weak self] in
+            self?.clearUserData()
+        }
+        model.callbackOnError = { [weak self] error in
+            self?.show(error: error)
+        }
+    }
+}
+
+//MARK: - Main
+extension LoginVC {
+    private func clearUserData() {
+        loginView.text = nil
+        loginView.text = nil
+        loginView.text = nil
+        loginView.text = nil
     }
 }
 

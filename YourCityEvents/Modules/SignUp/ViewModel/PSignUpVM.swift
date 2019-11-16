@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PSignUpVM: PViewControllerViewModel {
-    var callback: ((PLoginVCState) -> Void)? { get set }
+    var callBackOnError: ((_ error: Error) -> ())? {get set}
+    var callback: (() -> ())? { get set }
     func signUp(_ firstName: String?, _ lastName: String?,_ email: String?, pass: String?)
-    
 }

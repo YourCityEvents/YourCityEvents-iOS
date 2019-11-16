@@ -9,7 +9,8 @@
 import Foundation
 
 protocol PLoginVM: PViewControllerViewModel {
-    var callback: ((PLoginVCState) -> Void)? { get set }
+    var callback: (() -> ())? { get set }
+    var callbackOnError: ((Error) -> ())? { get set }
     func loginUser(_ login: String?, pass: String?)
     func signUpPressed()
 }
