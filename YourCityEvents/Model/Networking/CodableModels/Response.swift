@@ -10,7 +10,7 @@ import Foundation
 
 struct Response<T: Decodable>: Decodable {
     let data: T?
-    let result: Bool
+    let result: String
     let errors: [String]?
 }
 

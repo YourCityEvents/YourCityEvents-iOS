@@ -9,7 +9,7 @@
 import Foundation
 
 class FeedVM: PFeedVM {
-    var callback: (() -> ())?
+    var onUpdateDataSource: (() -> ())?
     
     var sourceArray: [PTableViewCellModel] = []
     init() {
@@ -28,7 +28,7 @@ class FeedVM: PFeedVM {
                 }
                 self.sourceArray.append(vm)
             }
-            self.callback?()
+            self.onUpdateDataSource?()
         }
     }
 }

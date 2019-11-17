@@ -8,8 +8,16 @@
 
 import Foundation
 
+struct CitiesResponse: Codable {
+    let cities: [CityModel]
+}
+
 struct CityModel: Codable {
     let id: String
     let nameEn: String
     let nameUa: String
+}
+
+extension EndpointCollection {
+    static let getCities = Endpoint(method: .GET, pathEnding: "api/City")
 }

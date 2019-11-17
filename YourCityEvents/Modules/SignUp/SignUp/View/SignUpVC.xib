@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="YourCityEvents" customModuleProvider="target">
+            <connections>
+                <outlet property="firstNameInputView" destination="zt7-jf-kdV" id="f8U-SR-A9w"/>
+                <outlet property="firstProgressView" destination="IKh-MQ-JeN" id="aOu-FG-7mz"/>
+                <outlet property="lastNameInputView" destination="Rm9-pI-bCo" id="SRf-ox-Kes"/>
+                <outlet property="loginInputView" destination="UnM-gR-5LX" id="bF9-Bw-pbM"/>
+                <outlet property="passwordInputView" destination="gje-3g-MFj" id="36Q-NZ-vxO"/>
+                <outlet property="scrollView" destination="keX-Ku-5yh" id="VCb-gz-eMd"/>
+                <outlet property="secondProgressView" destination="A9H-Hs-4qn" id="b14-rb-cDp"/>
+                <outlet property="tableView" destination="ro8-CF-EWo" id="rPE-ie-DHV"/>
+                <outlet property="thirdProgressView" destination="6ge-wp-hwg" id="M0c-st-CIg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="o7t-EN-do3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1Y-RS-5O0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keX-Ku-5yh">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzM-Ry-hTL">
+                                    <rect key="frame" x="0.0" y="0.0" width="1242" height="818"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyW-7s-bHi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves" translatesAutoresizingMaskIntoConstraints="NO" id="0eo-8y-a6P">
+                                                    <rect key="frame" x="0.0" y="716" width="414" height="102"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="102" id="uQv-ve-3qr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKh-MQ-JeN" customClass="ProgressStepsView" customModule="YourCityEvents" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2m-1V-cK0">
+                                                            <rect key="frame" x="169.5" y="8" width="75.5" height="25.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="cLj-t8-lpa"/>
+                                                        <constraint firstItem="C2m-1V-cK0" firstAttribute="centerX" secondItem="IKh-MQ-JeN" secondAttribute="centerX" id="r17-EX-7Vf"/>
+                                                        <constraint firstItem="C2m-1V-cK0" firstAttribute="top" secondItem="IKh-MQ-JeN" secondAttribute="top" constant="8" id="yvV-we-Pib"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-nR-EDX">
+                                                    <rect key="frame" x="57" y="292" width="300" height="234"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnM-gR-5LX" customClass="InputView" customModule="YourCityEvents" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="300" id="KrC-1l-Fwt"/>
+                                                                <constraint firstAttribute="height" constant="66" id="e9x-D8-wZr"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPrivace" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Your email"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Email is not correct"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="needHelper" value="NO"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gje-3g-MFj" customClass="InputView" customModule="YourCityEvents" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="92" width="300" height="66"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="66" id="AIq-3i-MjC"/>
+                                                                <constraint firstAttribute="width" constant="300" id="J4U-XH-ey2"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPrivace" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Your email"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Password is not correct"/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="needHelper" value="NO"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxk-Ua-1eD" customClass="Button" customModule="YourCityEvents" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="184" width="300" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="300" id="4rJ-v6-h5a"/>
+                                                                <constraint firstAttribute="height" constant="50" id="H5z-2E-DCg"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="28"/>
+                                                            <state key="normal" title="Next">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="qmc-VJ-7iM"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="0eo-8y-a6P" secondAttribute="bottom" id="ENg-kg-muT"/>
+                                                <constraint firstAttribute="trailing" secondItem="IKh-MQ-JeN" secondAttribute="trailing" id="KPk-gW-u3y"/>
+                                                <constraint firstItem="IKh-MQ-JeN" firstAttribute="leading" secondItem="hyW-7s-bHi" secondAttribute="leading" id="PUm-px-dp5"/>
+                                                <constraint firstAttribute="trailing" secondItem="0eo-8y-a6P" secondAttribute="trailing" id="Zqj-E1-IYV"/>
+                                                <constraint firstItem="IKh-MQ-JeN" firstAttribute="top" secondItem="hyW-7s-bHi" secondAttribute="top" id="aga-D4-LkF"/>
+                                                <constraint firstItem="0eo-8y-a6P" firstAttribute="leading" secondItem="hyW-7s-bHi" secondAttribute="leading" id="vk3-F3-qvO"/>
+                                                <constraint firstItem="lVS-nR-EDX" firstAttribute="centerY" secondItem="hyW-7s-bHi" secondAttribute="centerY" id="ysY-bh-CEc"/>
+                                                <constraint firstItem="lVS-nR-EDX" firstAttribute="centerX" secondItem="hyW-7s-bHi" secondAttribute="centerX" id="ze9-2g-OER"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBd-U2-ZgF">
+                                            <rect key="frame" x="414" y="0.0" width="414" height="818"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="zjz-hl-XfY">
+                                                    <rect key="frame" x="57" y="292" width="300" height="234"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zt7-jf-kdV" customClass="InputView" customModule="YourCityEvents" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="300" id="21Z-ma-fTN"/>
+                                                                <constraint firstAttribute="height" constant="66" id="yRO-wp-kZU"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPrivace" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="First name"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Fiil the field "/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="needHelper" value="NO"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rm9-pI-bCo" customClass="InputView" customModule="YourCityEvents" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="92" width="300" height="66"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="300" id="PFz-jZ-PVc"/>
+                                                                <constraint firstAttribute="height" constant="66" id="cRv-5I-Npz"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPrivace" value="NO"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Last name"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Fiil the field "/>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="needHelper" value="NO"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxd-Lv-xBP" customClass="Button" customModule="YourCityEvents" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="184" width="300" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="300" id="RSE-3b-2Q1"/>
+                                                                <constraint firstAttribute="height" constant="50" id="SDq-uE-iyx"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="28"/>
+                                                            <state key="normal" title="Next">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="Rgo-8Z-Ypf"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9H-Hs-4qn" customClass="ProgressStepsView" customModule="YourCityEvents" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyT-h0-9bB">
+                                                            <rect key="frame" x="169.5" y="8" width="75.5" height="25.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="lyT-h0-9bB" firstAttribute="top" secondItem="A9H-Hs-4qn" secondAttribute="top" constant="8" id="Tk1-5w-ayf"/>
+                                                        <constraint firstItem="lyT-h0-9bB" firstAttribute="centerX" secondItem="A9H-Hs-4qn" secondAttribute="centerX" id="knd-36-Qwr"/>
+                                                        <constraint firstAttribute="height" constant="130" id="uiW-2n-UWH"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-k9-uhz">
+                                                    <rect key="frame" x="0.0" y="716" width="414" height="102"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="102" id="9qV-QD-Slc"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Zle-k9-uhz" firstAttribute="leading" secondItem="FBd-U2-ZgF" secondAttribute="leading" id="AWq-Dh-FQf"/>
+                                                <constraint firstItem="zjz-hl-XfY" firstAttribute="centerY" secondItem="FBd-U2-ZgF" secondAttribute="centerY" id="FvV-MO-37N"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zle-k9-uhz" secondAttribute="trailing" id="Vv5-2J-kbz"/>
+                                                <constraint firstItem="A9H-Hs-4qn" firstAttribute="top" secondItem="FBd-U2-ZgF" secondAttribute="top" id="WVL-uN-jA5"/>
+                                                <constraint firstItem="A9H-Hs-4qn" firstAttribute="leading" secondItem="FBd-U2-ZgF" secondAttribute="leading" id="XKu-sU-vL7"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zle-k9-uhz" secondAttribute="bottom" id="eFS-c0-lfb"/>
+                                                <constraint firstItem="zjz-hl-XfY" firstAttribute="centerX" secondItem="FBd-U2-ZgF" secondAttribute="centerX" id="iBa-W6-Nl8"/>
+                                                <constraint firstAttribute="trailing" secondItem="A9H-Hs-4qn" secondAttribute="trailing" id="qlf-vy-HCh"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-N4-Das">
+                                            <rect key="frame" x="828" y="0.0" width="414" height="818"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ge-wp-hwg" customClass="ProgressStepsView" customModule="YourCityEvents" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faw-dO-loh">
+                                                            <rect key="frame" x="150" y="8" width="114" height="25.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="faw-dO-loh" firstAttribute="top" secondItem="6ge-wp-hwg" secondAttribute="top" constant="8" id="1Op-Ot-XdP"/>
+                                                        <constraint firstItem="faw-dO-loh" firstAttribute="centerX" secondItem="6ge-wp-hwg" secondAttribute="centerX" id="Dd3-dX-mi3"/>
+                                                        <constraint firstAttribute="height" constant="130" id="beS-AD-C2j"/>
+                                                    </constraints>
+                                                </view>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ro8-CF-EWo">
+                                                    <rect key="frame" x="0.0" y="130" width="414" height="586"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </tableView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves" translatesAutoresizingMaskIntoConstraints="NO" id="mcd-An-TX0">
+                                                    <rect key="frame" x="0.0" y="716" width="414" height="102"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="102" id="4oD-wN-a6j"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mcd-An-TX0" secondAttribute="bottom" id="2wg-pB-eAB"/>
+                                                <constraint firstItem="6ge-wp-hwg" firstAttribute="leading" secondItem="hTd-N4-Das" secondAttribute="leading" id="7N8-Py-bgh"/>
+                                                <constraint firstItem="mcd-An-TX0" firstAttribute="top" secondItem="ro8-CF-EWo" secondAttribute="bottom" id="Bo0-2H-FCe"/>
+                                                <constraint firstItem="ro8-CF-EWo" firstAttribute="leading" secondItem="hTd-N4-Das" secondAttribute="leading" id="CXN-AL-u8C"/>
+                                                <constraint firstAttribute="trailing" secondItem="6ge-wp-hwg" secondAttribute="trailing" id="PVb-ct-yGc"/>
+                                                <constraint firstItem="6ge-wp-hwg" firstAttribute="top" secondItem="hTd-N4-Das" secondAttribute="top" id="U2k-US-5RA"/>
+                                                <constraint firstItem="mcd-An-TX0" firstAttribute="leading" secondItem="hTd-N4-Das" secondAttribute="leading" id="bD1-2l-kqe"/>
+                                                <constraint firstAttribute="trailing" secondItem="mcd-An-TX0" secondAttribute="trailing" id="bbR-Ip-P03"/>
+                                                <constraint firstAttribute="trailing" secondItem="ro8-CF-EWo" secondAttribute="trailing" id="jGY-HZ-sdV"/>
+                                                <constraint firstItem="ro8-CF-EWo" firstAttribute="top" secondItem="6ge-wp-hwg" secondAttribute="bottom" id="psE-zL-b4J"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="FBd-U2-ZgF" firstAttribute="height" secondItem="lzM-Ry-hTL" secondAttribute="height" id="xGR-3e-59k"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="lzM-Ry-hTL" secondAttribute="trailing" id="LCv-v2-Qic"/>
+                                <constraint firstItem="lzM-Ry-hTL" firstAttribute="top" secondItem="keX-Ku-5yh" secondAttribute="top" id="bKi-no-QNV"/>
+                                <constraint firstItem="lzM-Ry-hTL" firstAttribute="leading" secondItem="keX-Ku-5yh" secondAttribute="leading" id="oJg-9Y-xHG"/>
+                                <constraint firstAttribute="bottom" secondItem="lzM-Ry-hTL" secondAttribute="bottom" id="zZo-H6-pXb"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hTd-N4-Das" firstAttribute="height" secondItem="g1Y-RS-5O0" secondAttribute="height" id="0UG-Yn-hyc"/>
+                        <constraint firstItem="FBd-U2-ZgF" firstAttribute="width" secondItem="g1Y-RS-5O0" secondAttribute="width" id="0ax-J9-HK4"/>
+                        <constraint firstAttribute="trailing" secondItem="keX-Ku-5yh" secondAttribute="trailing" id="4Tg-a3-RNp"/>
+                        <constraint firstItem="keX-Ku-5yh" firstAttribute="leading" secondItem="g1Y-RS-5O0" secondAttribute="leading" id="5Oo-17-9YX"/>
+                        <constraint firstItem="keX-Ku-5yh" firstAttribute="top" secondItem="g1Y-RS-5O0" secondAttribute="top" id="63u-Mh-6VT"/>
+                        <constraint firstItem="FBd-U2-ZgF" firstAttribute="height" secondItem="g1Y-RS-5O0" secondAttribute="height" id="aws-8x-wpf"/>
+                        <constraint firstItem="hyW-7s-bHi" firstAttribute="height" secondItem="g1Y-RS-5O0" secondAttribute="height" id="fJX-cO-SYV"/>
+                        <constraint firstAttribute="bottom" secondItem="keX-Ku-5yh" secondAttribute="bottom" id="kMB-XX-nwl"/>
+                        <constraint firstItem="hyW-7s-bHi" firstAttribute="width" secondItem="g1Y-RS-5O0" secondAttribute="width" id="lEn-nv-0vO"/>
+                        <constraint firstItem="hTd-N4-Das" firstAttribute="width" secondItem="g1Y-RS-5O0" secondAttribute="width" id="qNX-D4-y1f"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="g1Y-RS-5O0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="27B-Ko-Q4S"/>
+                <constraint firstItem="g1Y-RS-5O0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5YA-Qc-IiU"/>
+                <constraint firstItem="g1Y-RS-5O0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gpf-hd-hzE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g1Y-RS-5O0" secondAttribute="bottom" id="v6h-cq-C5s"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="waves" width="375" height="92"/>
+    </resources>
+</document>

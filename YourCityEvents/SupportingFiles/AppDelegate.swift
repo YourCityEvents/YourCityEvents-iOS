@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = Router.createRootWindow()
         IQKeyboardManager.shared.enable = true
-//        IQKeyboardManager.shared.toolbarPreviousNextAllowedClasses.append(UIStackView.self)
+        IQKeyboardManager.shared.toolbarPreviousNextAllowedClasses.append(UIStackView.self)
         return true
     }
 

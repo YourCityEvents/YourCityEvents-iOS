@@ -26,7 +26,7 @@ extension FeedVC {
     fileprivate func configure() {
         guard var model = viewModel as? PFeedVM else { return }
         configureTableView()
-        model.callback = {
+        model.onUpdateDataSource = {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

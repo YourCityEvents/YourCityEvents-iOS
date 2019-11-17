@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PFeedVM: PTableViewModel {
-    var callback: (() -> ())? { get set }
+    var onUpdateDataSource: (() -> ())? { get set }
 }

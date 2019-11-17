@@ -63,6 +63,14 @@ class Router {
         setRoot(viewController: vc)
     }
     
+    static func showSignUpBioVC(email: String, password: String) {
+        let vc = SignUpVC()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        vc.viewModel = SignUpVM()
+        setRoot(viewController: vc)
+    }
+
     static func dismissVC(_ block: (() -> Void)?) {
         guard let viewC = Router.getRootViewController() else { return }
         viewC.dismiss(animated: true, completion: block)
