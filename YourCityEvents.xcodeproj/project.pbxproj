@@ -236,7 +236,9 @@
 		2E0378E4236205D9000BA973 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				2EAE6D0723816F2D00D4B867 /* SignUp */,
+				2EAE6D0923816F4400D4B867 /* View */,
+				2EAE6D0E238170BB00D4B867 /* ViewModel */,
+				2EAE6D1B238193E600D4B867 /* Cells */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -452,16 +454,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2EAE6D0723816F2D00D4B867 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				2EAE6D0923816F4400D4B867 /* View */,
-				2EAE6D0E238170BB00D4B867 /* ViewModel */,
-				2EAE6D1B238193E600D4B867 /* Cells */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
 		2EAE6D0923816F4400D4B867 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,8 +502,8 @@
 		2EE95BEE23662272000A5AFB /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				2EAE6D002380903E00D4B867 /* ViewModel */,
 				2EE95BF1236624A7000A5AFB /* View */,
+				2EAE6D002380903E00D4B867 /* ViewModel */,
 				2EE95BFF236627F3000A5AFB /* Cell */,
 			);
 			path = Feed;

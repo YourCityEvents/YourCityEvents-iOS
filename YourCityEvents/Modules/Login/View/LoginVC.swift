@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LoginVC: ViewController {
     @IBOutlet weak var loginView: InputView!{ didSet {loginView.validator = EmailValidator()}}
@@ -19,9 +20,19 @@ class LoginVC: ViewController {
     
     private func configure() {
         guard var model = viewModel as? PLoginVM else { return }
+       
+        model.callBackOnShowHud = {
+            SVProgressHUD.show()
+        }
+        
+        model.callBackOnDismissHud = {
+            SVProgressHUD.dismiss()
+        }
+        
         model.callback = { [weak self] in
             self?.clearUserData()
         }
+        
         model.callbackOnError = { [weak self] error in
             self?.show(error: error)
         }

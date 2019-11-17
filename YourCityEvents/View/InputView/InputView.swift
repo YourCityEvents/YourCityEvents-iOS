@@ -53,14 +53,13 @@ class InputView: XibView {
         currentValidator.validate(text) ? valideText() : notValideText()
     }
     func notValideText() {
-//        vWhite.borderColor = UIColor.red
+        vWhite.borderColor = UIColor.red
         vWhite.backgroundColor = .white
         lErrorMassage.isHidden = false
         ivPrivace.image = #imageLiteral(resourceName: "0.2RedEye.pdf")
     }
     func valideText() {
-//        vWhite.
-//        vWhite.borderColor = #colorLiteral(red: 0.8745098039, green: 0.8745098039, blue: 0.8745098039, alpha: 1)
+        vWhite.borderColor = #colorLiteral(red: 0.8745098039, green: 0.8745098039, blue: 0.8745098039, alpha: 1)
         vWhite.backgroundColor = .white
         lErrorMassage.isHidden = true
         ivPrivace.image = #imageLiteral(resourceName: "0.2Eye.pdf")

@@ -9,10 +9,11 @@
 import Foundation
 
 protocol PSignUpVM: PTableViewModel {
-//    func signUp(firstName: String, lastName: String)
     func validateUserSensitiveData(_ login: String?, _ password: String?)
     func validateUserData(_ firstName: String?, _ lastName: String?)
     var callBackOnScrollView: ((Int) -> ())? {get set}
     var onUpdateDataSource: (() -> ())? {get set}
     var callBackOnError: ((_ error: Error) -> ())? {get set}
+    var callBackOnShowHud: (() -> ())? {get set}
+    var callBackOnDismissHud: (() -> ())? {get set}
 }

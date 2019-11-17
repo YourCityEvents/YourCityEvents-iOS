@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -82,7 +83,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-uh-nAh">
                                     <rect key="frame" x="203" y="0.0" width="61" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <state key="normal" title="Sign up"/>
+                                    <state key="normal" title="Sign up">
+                                        <color key="titleColor" name="MainBlue"/>
+                                    </state>
                                     <connections>
                                         <action selector="signUpButtonPressed" destination="-1" eventType="touchUpInside" id="F5s-pn-VmQ"/>
                                     </connections>
@@ -94,9 +97,17 @@
                         </stackView>
                     </subviews>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YourCityEvents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnN-KT-7bB">
+                    <rect key="frame" x="85" y="232" width="244.5" height="42"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="36"/>
+                    <color key="textColor" name="MainBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.92941802740097046" green="0.92940050363540649" blue="0.9294123649597168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="fnN-KT-7bB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Opa-NH-vcL"/>
+                <constraint firstItem="OxG-Qj-gEo" firstAttribute="top" secondItem="fnN-KT-7bB" secondAttribute="bottom" constant="32" id="dGe-lZ-tiV"/>
                 <constraint firstItem="OxG-Qj-gEo" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="lyY-1r-J0W"/>
                 <constraint firstItem="OxG-Qj-gEo" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="tXA-uL-VHL"/>
             </constraints>
@@ -104,4 +115,9 @@
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="MainBlue">
+            <color red="0.14499999582767487" green="0.10999999940395355" blue="0.63499999046325684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

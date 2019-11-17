@@ -13,7 +13,8 @@ class LoginVM: PLoginVM {
     fileprivate let networking = NetworkingService()
     var callbackOnError: ((Error) -> ())?
     var callback: (() -> Void)?
-    
+    var callBackOnShowHud: (() -> ())?
+    var callBackOnDismissHud: (() -> ())?
     func signUpPressed() {
         Router.showSignUpController()
     }
@@ -25,8 +26,10 @@ class LoginVM: PLoginVM {
             let error = NSError(domain:"", code:401, userInfo:[NSLocalizedDescriptionKey: "Please, enter login and password first"])
             callbackOnError?(error)
         }else {
+            callBackOnShowHud?()
             let model = LoginModel(email: login!, password: pass!)
             networking.performRequest(to: EndpointCollection.login, with: model) { [weak self] (result: Result<AuthResponse>) in
+                self?.callBackOnDismissHud?()
                 switch result {
                 case .success(let response):
                     DispatchQueue.main.async {

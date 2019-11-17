@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SignUpVC: TableViewController {
     
@@ -32,6 +33,14 @@ class SignUpVC: TableViewController {
         thirdProgressView.configure(with: ["Login", "Bio", "Your city"], activeIndex: 2)
         configureTableView()
         
+        model.callBackOnShowHud = {
+            SVProgressHUD.show()
+        }
+        
+        model.callBackOnDismissHud = {
+            SVProgressHUD.dismiss()
+        }
+
         model.callBackOnError = { [weak self] error in
             self?.show(error: error)
         }
@@ -48,6 +57,8 @@ class SignUpVC: TableViewController {
             }
             switch index {
             case 1:
+                self?.scrollView.isPagingEnabled = true
+                self?.scrollView.isScrollEnabled = true
                 self?.scrollView.setContentOffset(CGPoint(x: width, y: 0), animated: true)
             case 2:
                 self?.scrollView.setContentOffset(CGPoint(x: width * 2, y: 0), animated: true)

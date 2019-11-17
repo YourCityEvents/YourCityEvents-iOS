@@ -14,6 +14,8 @@ class SignUpVM: PSignUpVM {
     var callBackOnScrollView: ((Int) -> ())?
     var onUpdateDataSource: (() -> ())?
     var callBackOnError: ((Error) -> ())?
+    var callBackOnShowHud: (() -> ())?
+    var callBackOnDismissHud: (() -> ())?
     fileprivate var login: String!
     fileprivate var password: String!
     fileprivate var firstName: String!
@@ -47,8 +49,10 @@ class SignUpVM: PSignUpVM {
     }
 
     fileprivate func signUp(city: CityModel) {
+        callBackOnShowHud?()
         let model = RegisterModel(firstName: firstName, lastName: lastName, email: login, password: password, city: city)
         networking.performRequest(to: EndpointCollection.register, with: model) { [weak self] (result: Result<AuthResponse>) in
+            self?.callBackOnDismissHud?()
             switch result {
             case .success(let response):
                 print(response)
