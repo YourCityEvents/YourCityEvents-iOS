@@ -76,4 +76,7 @@ extension SignUpVC {
         default: break
         }
     }
+    @IBAction func backToLoginAction() {
+        Router.showLoginInController()
+    }
 }

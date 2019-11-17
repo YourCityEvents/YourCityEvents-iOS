@@ -12,13 +12,12 @@ class WelcomeVC: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.route()
+        }
     }
-}
-
-//MARK: - Actions
-extension WelcomeVC {
     
-    @IBAction func getStartedPressed() {
+    private func route() {
         guard let model = viewModel as? WelcomeVM else {
             return
         }

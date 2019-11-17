@@ -33,19 +33,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1Y-RS-5O0">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keX-Ku-5yh">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzM-Ry-hTL">
-                                    <rect key="frame" x="0.0" y="0.0" width="1242" height="818"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1242" height="852"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyW-7s-bHi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves" translatesAutoresizingMaskIntoConstraints="NO" id="0eo-8y-a6P">
-                                                    <rect key="frame" x="0.0" y="716" width="414" height="102"/>
+                                                    <rect key="frame" x="0.0" y="750" width="414" height="102"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="102" id="uQv-ve-3qr"/>
                                                     </constraints>
@@ -68,7 +68,7 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-nR-EDX">
-                                                    <rect key="frame" x="57" y="292" width="300" height="234"/>
+                                                    <rect key="frame" x="57" y="279" width="300" height="294"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnM-gR-5LX" customClass="InputView" customModule="YourCityEvents" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
@@ -112,6 +112,28 @@
                                                                 <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="qmc-VJ-7iM"/>
                                                             </connections>
                                                         </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vn6-Zz-Mft">
+                                                            <rect key="frame" x="0.0" y="260" width="300" height="34"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-hn-Tor">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="207.5" height="34"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPe-g4-DxN">
+                                                                    <rect key="frame" x="220.5" y="0.0" width="79.5" height="34"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <state key="normal" title="Sign in"/>
+                                                                    <connections>
+                                                                        <action selector="backToLoginAction" destination="-1" eventType="touchUpInside" id="Eiy-kL-nRk"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="300" id="mJU-nZ-gi5"/>
+                                                            </constraints>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -128,10 +150,10 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBd-U2-ZgF">
-                                            <rect key="frame" x="414" y="0.0" width="414" height="818"/>
+                                            <rect key="frame" x="414" y="0.0" width="414" height="852"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="zjz-hl-XfY">
-                                                    <rect key="frame" x="57" y="292" width="300" height="234"/>
+                                                    <rect key="frame" x="57" y="279" width="300" height="294"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zt7-jf-kdV" customClass="InputView" customModule="YourCityEvents" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="66"/>
@@ -175,6 +197,28 @@
                                                                 <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="Rgo-8Z-Ypf"/>
                                                             </connections>
                                                         </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Leb-qW-kUG">
+                                                            <rect key="frame" x="0.0" y="260" width="300" height="34"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yT-5g-0yi">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="207.5" height="34"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un2-oC-wB9">
+                                                                    <rect key="frame" x="220.5" y="0.0" width="79.5" height="34"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <state key="normal" title="Sign in"/>
+                                                                    <connections>
+                                                                        <action selector="backToLoginAction" destination="-1" eventType="touchUpInside" id="tFV-Vb-sfH"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="300" id="d1A-h0-aof"/>
+                                                            </constraints>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9H-Hs-4qn" customClass="ProgressStepsView" customModule="YourCityEvents" customModuleProvider="target">
@@ -195,7 +239,7 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-k9-uhz">
-                                                    <rect key="frame" x="0.0" y="716" width="414" height="102"/>
+                                                    <rect key="frame" x="0.0" y="750" width="414" height="102"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="102" id="9qV-QD-Slc"/>
                                                     </constraints>
@@ -214,7 +258,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-N4-Das">
-                                            <rect key="frame" x="828" y="0.0" width="414" height="818"/>
+                                            <rect key="frame" x="828" y="0.0" width="414" height="852"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ge-wp-hwg" customClass="ProgressStepsView" customModule="YourCityEvents" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -234,11 +278,11 @@
                                                     </constraints>
                                                 </view>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ro8-CF-EWo">
-                                                    <rect key="frame" x="0.0" y="130" width="414" height="586"/>
+                                                    <rect key="frame" x="0.0" y="130" width="414" height="620"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </tableView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves" translatesAutoresizingMaskIntoConstraints="NO" id="mcd-An-TX0">
-                                                    <rect key="frame" x="0.0" y="716" width="414" height="102"/>
+                                                    <rect key="frame" x="0.0" y="750" width="414" height="102"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="102" id="4oD-wN-a6j"/>
                                                     </constraints>
@@ -294,7 +338,7 @@
                 <constraint firstItem="g1Y-RS-5O0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="27B-Ko-Q4S"/>
                 <constraint firstItem="g1Y-RS-5O0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5YA-Qc-IiU"/>
                 <constraint firstItem="g1Y-RS-5O0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gpf-hd-hzE"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g1Y-RS-5O0" secondAttribute="bottom" id="v6h-cq-C5s"/>
+                <constraint firstAttribute="bottom" secondItem="g1Y-RS-5O0" secondAttribute="bottom" id="v6h-cq-C5s"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>

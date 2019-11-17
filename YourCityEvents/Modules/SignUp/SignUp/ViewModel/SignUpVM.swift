@@ -45,25 +45,7 @@ class SignUpVM: PSignUpVM {
             callBackOnScrollView?(2)
         }
     }
-    
-//    func signUp(firstName: String, lastName: String) {
-//        let model = RegisterModel(firstName: firstName, lastName: lastName, email: login, password: password, city: nil)
-//        networking.performRequest(to: EndpointCollection.register, with: model) { [weak self] (result: Result<AuthResponse>) in
-//            switch result {
-//            case .success(let response):
-//                print(response)
-//                DispatchQueue.main.async {
-//                    User.save(model: UserModel(login: model.email, password: model.password, token: response.token))
-//                    Router.showTabBarController()
-//                }
-//            case .failure(let error):
-//                DispatchQueue.main.async {
-//                    self?.callBackOnError?(error)
-//                }
-//            }
-//        }
-//    }
-    
+
     fileprivate func signUp(city: CityModel) {
         let model = RegisterModel(firstName: firstName, lastName: lastName, email: login, password: password, city: city)
         networking.performRequest(to: EndpointCollection.register, with: model) { [weak self] (result: Result<AuthResponse>) in
@@ -80,7 +62,6 @@ class SignUpVM: PSignUpVM {
                 }
             }
         }
-
     }
     
     fileprivate func getCities() {
