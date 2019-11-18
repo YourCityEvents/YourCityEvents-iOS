@@ -11,7 +11,7 @@ import UIKit
 protocol PViewControllerViewModel { }
 
 class ViewController: UIViewController {
-    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .default }
     /// First Layout Subviews
     private var isFirstLayoutSubviews: Bool = true
     /// View Model

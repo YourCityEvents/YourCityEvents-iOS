@@ -9,5 +9,6 @@ target 'YourCityEvents' do
   pod 'SVProgressHUD'
   pod 'SwiftKeychainWrapper'
   pod 'IQKeyboardManagerSwift'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 
 end

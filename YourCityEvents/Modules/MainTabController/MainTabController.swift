@@ -17,11 +17,9 @@ class MainTabController: UITabBarController {
     }
     
     private lazy var screens: [TabScreen] = {
-        let feedVC = FeedVC()
-        feedVC.viewModel = FeedVM()
-        return [TabScreen(icon: UIImage(named: "home"), viewController: feedVC),
+        return [TabScreen(icon: UIImage(named: "home"), viewController: FeedVC(FeedVM())),
                 TabScreen(icon: UIImage(named: "add"), viewController: UIViewController()),
-                TabScreen(icon: UIImage(named: "profile"), viewController: ProfileVC())]
+                TabScreen(icon: UIImage(named: "profile"), viewController: ProfileVC(ProfileVM()))]
     }()
     
     override func viewDidLoad() {

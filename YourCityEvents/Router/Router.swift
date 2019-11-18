@@ -62,6 +62,33 @@ class Router {
         setRoot(viewController: vc)
     }
     
+    static func showEditProfile() {
+        guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
+        guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
+        guard let _ = navVC.topViewController as? ProfileVC else {
+            return
+        }
+        navVC.pushViewController(EditProfileVC(EditProfileVM()), animated: true)
+    }
+    
+    static func showChangeEmailController() {
+          guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
+          guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
+          guard let _ = navVC.topViewController as? EditProfileVC else {
+              return
+          }
+        navVC.pushViewController(ChangeProfileVC(ChangeProfileVM(.email)), animated: true)
+    }
+    
+    static func showChangePasswordController() {
+          guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
+          guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
+          guard let _ = navVC.topViewController as? EditProfileVC else {
+              return
+          }
+        navVC.pushViewController(ChangeProfileVC(ChangeProfileVM(.password)), animated: true)
+    }
+    
     static func dismissVC(_ block: (() -> Void)?) {
         guard let viewC = Router.getRootViewController() else { return }
         viewC.dismiss(animated: true, completion: block)

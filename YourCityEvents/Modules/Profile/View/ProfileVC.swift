@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileVC: UIViewController {
+class ProfileVC: ViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,7 +16,6 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         configure()
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -32,7 +31,6 @@ extension ProfileVC {
     }
     
     fileprivate func configureTableView() {
-        tableView.register(UserCell.nib(), forCellReuseIdentifier: UserCell.reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 2.0
         tableView.tableFooterView = UIView(frame: .zero)
@@ -41,6 +39,16 @@ extension ProfileVC {
         tableView.separatorStyle = .none
     }
     
+}
+
+//MARK: - Actions
+extension ProfileVC {
+    
+    @IBAction func editAction() {
+        guard let model = viewModel as? ProfileVM else { return }
+        model.showEditProfile()
+        print("edit")
+    }
 }
 
 extension ProfileVC: UITableViewDelegate {
@@ -78,7 +86,7 @@ extension ProfileVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.reuseIdentifier, for: indexPath)
-        return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.reuseIdentifier, for: indexPath)
+        return UITableViewCell()
     }
 }

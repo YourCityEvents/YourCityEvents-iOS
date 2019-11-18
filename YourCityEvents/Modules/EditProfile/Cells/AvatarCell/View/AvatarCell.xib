@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="106" id="p4e-AI-xN2" customClass="AvatarCell" customModule="YourCityEvents" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p4e-AI-xN2" id="Z7z-n5-rM0">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Mnr-EH-Ogd">
+                        <rect key="frame" x="159" y="5" width="96" height="96"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="48"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxW-1s-rZA">
+                        <rect key="frame" x="159" y="5" width="96" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="96" id="2TZ-vP-iBA"/>
+                            <constraint firstAttribute="width" constant="96" id="tLl-0a-QZw"/>
+                        </constraints>
+                        <connections>
+                            <action selector="changeAvatarAction" destination="p4e-AI-xN2" eventType="touchUpInside" id="gRo-c7-oz3"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YxW-1s-rZA" firstAttribute="centerY" secondItem="Z7z-n5-rM0" secondAttribute="centerY" id="8R7-Hh-IHn"/>
+                    <constraint firstItem="Mnr-EH-Ogd" firstAttribute="height" secondItem="YxW-1s-rZA" secondAttribute="height" id="8ti-G4-jBZ"/>
+                    <constraint firstItem="Mnr-EH-Ogd" firstAttribute="width" secondItem="YxW-1s-rZA" secondAttribute="width" id="ApB-yb-5n5"/>
+                    <constraint firstItem="Mnr-EH-Ogd" firstAttribute="centerX" secondItem="YxW-1s-rZA" secondAttribute="centerX" id="We3-dg-77K"/>
+                    <constraint firstItem="Mnr-EH-Ogd" firstAttribute="centerY" secondItem="YxW-1s-rZA" secondAttribute="centerY" id="lud-nN-Gel"/>
+                    <constraint firstItem="YxW-1s-rZA" firstAttribute="centerX" secondItem="Z7z-n5-rM0" secondAttribute="centerX" id="s4Z-2X-VgU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="userImageView" destination="Mnr-EH-Ogd" id="VzP-VH-ej3"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="123.21428571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="editPhoto" width="96" height="97"/>
+    </resources>
+</document>
