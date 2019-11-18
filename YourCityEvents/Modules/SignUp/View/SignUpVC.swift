@@ -27,7 +27,10 @@ class SignUpVC: TableViewController {
     
     private func configure() {
         guard var model = viewModel as? PSignUpVM else { return }
-        
+        scrollView.keyboardDismissMode = .onDrag
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: 0);
         firstProgressView.configure(with: ["Login", "Bio", "Your city"], activeIndex: 0)
         secondProgressView.configure(with: ["Login", "Bio", "Your city"], activeIndex: 1)
         thirdProgressView.configure(with: ["Login", "Bio", "Your city"], activeIndex: 2)
@@ -45,9 +48,9 @@ class SignUpVC: TableViewController {
             self?.show(error: error)
         }
         
-        model.onUpdateDataSource = {
+        model.onUpdateDataSource = { [weak self] in
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         }
         

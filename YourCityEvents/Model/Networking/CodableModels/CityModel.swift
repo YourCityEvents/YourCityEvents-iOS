@@ -19,5 +19,5 @@ struct CityModel: Codable {
 }
 
 extension EndpointCollection {
-    static let getCities = Endpoint(method: .GET, pathEnding: "api/City")
+    static let getCities = Endpoint(method: .GET, pathEnding: "City")
 }

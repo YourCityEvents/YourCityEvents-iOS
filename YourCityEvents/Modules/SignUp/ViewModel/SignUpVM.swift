@@ -50,7 +50,11 @@ class SignUpVM: PSignUpVM {
 
     fileprivate func signUp(city: CityModel) {
         callBackOnShowHud?()
-        let model = RegisterModel(firstName: firstName, lastName: lastName, email: login, password: password, city: city)
+        guard let name = firstName, let lastName = lastName, let password = password, let email = login else {
+            callBackOnDismissHud?()
+            return
+        }
+        let model = RegisterModel(firstName: name, lastName: lastName, email: email, password: password, city: city)
         networking.performRequest(to: EndpointCollection.register, with: model) { [weak self] (result: Result<AuthResponse>) in
             self?.callBackOnDismissHud?()
             switch result {

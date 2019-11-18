@@ -56,10 +56,9 @@ class Router {
     }
     
     static func showLoginInController() {
-        let vc = LoginVC()
+        let vc = LoginVC(LoginVM())
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
-        vc.viewModel = LoginVM()
         setRoot(viewController: vc)
     }
     

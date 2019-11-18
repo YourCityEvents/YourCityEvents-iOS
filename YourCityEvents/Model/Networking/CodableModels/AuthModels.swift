@@ -26,6 +26,6 @@ struct LoginModel: Codable {
 }
 
 extension EndpointCollection {
-    static let register = Endpoint(method: .POST, pathEnding: "register")
-    static let login = Endpoint(method: .POST, pathEnding: "login")
+    static let register = Endpoint(method: .POST, pathEnding: "Identity/register")
+    static let login = Endpoint(method: .POST, pathEnding: "Identity/login")
 }

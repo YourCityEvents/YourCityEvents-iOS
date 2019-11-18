@@ -93,7 +93,7 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isPrivace" value="YES"/>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Your email"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Your password"/>
                                                                 <userDefinedRuntimeAttribute type="string" keyPath="errorMessage" value="Password is not correct"/>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="needHelper" value="NO"/>
                                                             </userDefinedRuntimeAttributes>
@@ -238,7 +238,7 @@
                                                         <constraint firstAttribute="height" constant="130" id="uiW-2n-UWH"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-k9-uhz">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves1" translatesAutoresizingMaskIntoConstraints="NO" id="Zle-k9-uhz">
                                                     <rect key="frame" x="0.0" y="750" width="414" height="102"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="102" id="9qV-QD-Slc"/>
@@ -346,5 +346,6 @@
     </objects>
     <resources>
         <image name="waves" width="375" height="92"/>
+        <image name="waves1" width="375" height="93"/>
     </resources>
 </document>

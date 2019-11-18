@@ -7,5 +7,5 @@
 //
 
 struct Config {
-    static let basePath = "https://yourcityevents.azurewebsites.net/"
+    static let basePath = "https://yourcityevents.azurewebsites.net/api/"
 }

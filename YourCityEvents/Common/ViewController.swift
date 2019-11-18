@@ -28,6 +28,11 @@ class ViewController: UIViewController {
         super.init(nibName: String(describing: type(of: self)), bundle: Bundle.main)
         debugPrint("🔺Init \(type(of: self))")
     }
+    //MARK: - Conv Init -
+    convenience init(_ vm: PViewControllerViewModel) {
+        self.init()
+        self.viewModel = vm
+    }
     // View Did Layout Subviews
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
