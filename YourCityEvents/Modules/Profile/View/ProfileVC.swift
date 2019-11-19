@@ -11,6 +11,7 @@ import UIKit
 class ProfileVC: ViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bioTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

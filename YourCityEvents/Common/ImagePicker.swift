@@ -50,6 +50,10 @@ open class ImagePicker: NSObject {
             alertController.addAction(action)
         }
         
+        if let action = self.action(for: .camera, title: "Camera") {
+            alertController.addAction(action)
+        }
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
             alertController.popoverPresentationController?.sourceView = sourceView
             alertController.popoverPresentationController?.sourceRect = sourceView.bounds
