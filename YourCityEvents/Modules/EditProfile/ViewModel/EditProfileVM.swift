@@ -15,15 +15,17 @@ class EditProfileVM: PEditProfileVM {
     var callBackOnLogOut: (() -> ())?
     var callBackOnUpdateDataSource: (() -> ())?
     var callBackOnPicker: (() -> ())?
-    var currentUserImage = UIImage(named: "editPhoto")
     var sourceArray: [PTableViewCellModel] = []
     
-    init() {
-        let vm = AvatarCellVM(image: currentUserImage!) { [weak self] in
+    private var user: UserModel!
+    private let networking = NetworkingService()
+    
+    init(_ user: UserModel) {
+        self.user = user
+        let vm = AvatarCellVM(user.imageUrl) { [weak self] in
             self?.callBackOnPicker?()
         }
         sourceArray.append(vm)
-        
         var type = (EditProfileCellType.changeCity ,EditProfileCellTypeInfo(image: UIImage(named: "key")!, title: "Change city", isHiddenArrow: false))
         let cityVM = EditProfileCellVM(type) { (selected) in
 
@@ -58,9 +60,25 @@ class EditProfileVM: PEditProfileVM {
     }
     
     func updateWith(_ image: UIImage) {
-        currentUserImage = image
+
+        let resizedImage = image.resized(toWidth: 700.0)
+        let imageData = resizedImage!.jpegData(compressionQuality: 0.8)
+        let base64 = imageData!.base64EncodedString(options: .lineLength64Characters)
+        let model = UpdateImageModel(array: base64)
+        callBackOnShowHud?()
+        networking.performRequest(to: EndpointCollection.updateUserImage, with: model) { [weak self] (result: Result<UpdateImageResponse>) in
+            self?.callBackOnDismissHud?()
+            switch result {
+            case .success(let response):
+                self?.user.imageUrl = response.path
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    print(error)
+                }
+            }
+        }
         sourceArray.removeFirst()
-        let vm = AvatarCellVM(image: currentUserImage!) { [weak self] in
+        let vm = AvatarCellVM(nil, image) { [weak self] in
             self?.callBackOnPicker?()
         }
         sourceArray.insert(vm, at: 0)

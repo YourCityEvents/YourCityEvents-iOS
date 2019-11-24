@@ -14,14 +14,14 @@ struct UserResponseModel: Codable {
 
 struct UserModel: Codable {
     let id: String
-    let firstName: String
-    let lastName: String
-    let bio: String?
-    let email: String
-    let city: CityModel
-    let hostingEvents: String?
-    let visitingEvents: String?
-    let imageUrl: String?
+    var firstName: String
+    var lastName: String
+    var bio: String?
+    var email: String
+    var city: CityModel
+    var hostingEvents: String?
+    var visitingEvents: String?
+    var imageUrl: String?
     
     var fullName: String {
         "\(firstName) \(lastName)"

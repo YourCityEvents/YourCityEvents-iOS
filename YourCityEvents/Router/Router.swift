@@ -56,11 +56,12 @@ class Router {
         setRoot(viewController: vc)
     }
     
-    static func showEditProfile() {
+    static func showEditProfile(_ userModel: UserModel? = nil) {
         guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
         guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
         if let _ = navVC.topViewController as? ProfileVC {
-            navVC.pushViewController(EditProfileVC(EditProfileVM()), animated: true)
+            guard let user = userModel else { return }
+            navVC.pushViewController(EditProfileVC(EditProfileVM(user)), animated: true)
         }else {
             navVC.popViewController(animated: true)
         }

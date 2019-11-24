@@ -9,18 +9,23 @@
 import UIKit
 
 class AvatarCellVM: PAvatarCellVM {
-    func getImage() -> UIImage { image }
+    func getImage() -> UIImage? { image }
+    func getStringUrl() -> String? { stringUrl }
     var callBackOnPicker: (() -> ())
     
     var needToUpdateCallback: (() -> Void)?
     var cellIdentifire: String = AvatarCell.getCellIdentifier()
     var cellHeight: Float = 100.0
-    var image: UIImage
+    var stringUrl: String?
+    var image: UIImage?
     
-    init(image: UIImage, callBackOnTap: @escaping ()->()) {
+    init(_ url: String? = nil, _ image: UIImage? = nil, callBackOnTap: @escaping ()->()) {
         callBackOnPicker = callBackOnTap
+        self.stringUrl = url
         self.image = image
     }
+    
+    
     
     func onTap() {
         callBackOnPicker()

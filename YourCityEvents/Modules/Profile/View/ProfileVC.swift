@@ -16,6 +16,7 @@ class ProfileVC: ViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var bioTextView: UITextView!
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -39,12 +40,16 @@ extension ProfileVC {
         SVProgressHUD.show()
         headerView.isHidden = true
         tableView.isHidden = true
+        profileImageView.cornerRadius = 40
         model.getUserModel()
         model.callBackOnUserModel = { [weak self] model in
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
                 self?.fullNameLabel.text = model.fullName
                 self?.cityLabel.text = model.city.nameEn
+                if let url = model.imageUrl {
+                    self?.profileImageView.downloaded(from: url, contentMode: .scaleAspectFill)
+                }
                 self?.headerView.isHidden = false
                 self?.tableView.isHidden = false
                 self?.tableView.reloadData()
@@ -70,7 +75,6 @@ extension ProfileVC {
     @IBAction func editAction() {
         guard let model = viewModel as? ProfileVM else { return }
         model.showEditProfile()
-        print("edit")
     }
 }
 

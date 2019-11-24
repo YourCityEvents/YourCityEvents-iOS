@@ -14,9 +14,17 @@ class AvatarCell: TableViewCell {
     
     override func setupUI() {
         super.setupUI()
-        guard let model = viewModel as? PAvatarCellVM else { return }
-        userImageView.image = model.getImage()
         selectionStyle = .none
+        guard let model = viewModel as? PAvatarCellVM else { return }
+        if let url = model.getStringUrl() {
+            userImageView.downloaded(from: url, contentMode: .scaleAspectFill)
+        }else {
+            guard let image = model.getImage() else {
+                userImageView.image = UIImage(named: "editPhoto")
+                return
+            }
+            userImageView.image = image
+        }
     }
     
     @IBAction func changeAvatarAction() {

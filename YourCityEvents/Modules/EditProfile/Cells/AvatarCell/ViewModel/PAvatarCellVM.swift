@@ -11,5 +11,6 @@ import UIKit
 protocol PAvatarCellVM: PTableViewCellModel {
     var callBackOnPicker: (()->()) { get set }
     func onTap()
-    func getImage() -> UIImage
+    func getStringUrl() -> String?
+    func getImage() -> UIImage?
 }
