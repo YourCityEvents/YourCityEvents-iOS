@@ -10,6 +10,22 @@ import Foundation
 
 class ProfileVM: PProfileVM {
     
+    
+    
+    var callBackOnUserModel: ((UserModel) -> ())?
+    private let networking = NetworkingService()
+    
+    func getUserModel() {
+         networking.performRequest(to: EndpointCollection.getUser) { [weak self] (result: Result<UserResponseModel>) in
+            switch result {
+            case .success(let response):
+                self?.callBackOnUserModel?(response.user)
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
     func showEditProfile() {
         Router.showEditProfile()
     }

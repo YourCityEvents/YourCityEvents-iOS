@@ -10,6 +10,9 @@ import UIKit
 
 class EditProfileVM: PEditProfileVM {
     
+    var callBackOnShowHud: (() -> ())?
+    var callBackOnDismissHud: (() -> ())?
+    var callBackOnLogOut: (() -> ())?
     var callBackOnUpdateDataSource: (() -> ())?
     var callBackOnPicker: (() -> ())?
     var currentUserImage = UIImage(named: "editPhoto")
@@ -26,25 +29,26 @@ class EditProfileVM: PEditProfileVM {
 
         }
         
-        type = (EditProfileCellType.changeEmail ,EditProfileCellTypeInfo(image: UIImage(named: "key")!, title: "Change email", isHiddenArrow: false))
+        type = (EditProfileCellType.changeEmail ,EditProfileCellTypeInfo(image: UIImage(named: "mail")!, title: "Change email", isHiddenArrow: false))
         let emailVM = EditProfileCellVM(type) { (selected) in
             DispatchQueue.main.async {
-                Router.showChangeEmailController()
+                Router.showChangeController(.email)
             }
         }
         
         type.0 = .changePassword
-        type.1 = EditProfileCellTypeInfo(image: UIImage(named: "greyOval")!, title: "Change password", isHiddenArrow: false)
+        type.1 = EditProfileCellTypeInfo(image: UIImage(named: "key")!, title: "Change password", isHiddenArrow: false)
         let passVM = EditProfileCellVM(type) { (selected) in
             DispatchQueue.main.async {
-                Router.showChangePasswordController()
+                Router.showChangeController(.password)
             }
         }
         
         type.0 = .logout
-        type.1 = EditProfileCellTypeInfo(image: UIImage(named: "greyOval")!, title: "Logout", isHiddenArrow: true)
-        let logoutVM = EditProfileCellVM(type) { (selected) in
-
+        type.1 = EditProfileCellTypeInfo(image: UIImage(named: "logOut")!, title: "Logout", isHiddenArrow: true)
+        let logoutVM = EditProfileCellVM(type) { [weak self] (selected) in
+            
+            self?.callBackOnLogOut?()
         }
         
         sourceArray.append(cityVM)

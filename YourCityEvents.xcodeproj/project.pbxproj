@@ -28,6 +28,9 @@
 		2E0378DE23620332000BA973 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0378DD23620332000BA973 /* LoginVC.xib */; };
 		2E0378E6236209A8000BA973 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0378E5236209A8000BA973 /* MainTabController.swift */; };
 		2E0378E923620D14000BA973 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0378E823620D14000BA973 /* UIImageView+Extensions.swift */; };
+		2E04FD9D238AC4EB006B2F91 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FD9C238AC4EB006B2F91 /* ChangePasswordModel.swift */; };
+		2E04FD9F238AC577006B2F91 /* ChangeEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FD9E238AC577006B2F91 /* ChangeEmailModel.swift */; };
+		2E04FDA1238AD668006B2F91 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E04FDA0238AD668006B2F91 /* UserModel.swift */; };
 		2E1DA3A1237D9D4B00B5F73B /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1DA3A0237D9D4B00B5F73B /* ShadowView.swift */; };
 		2E1DA3A3237D9FA200B5F73B /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1DA3A2237D9FA200B5F73B /* UIFont+Extensions.swift */; };
 		2E1DA3A5237DA02400B5F73B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1DA3A4237DA02400B5F73B /* Networking.swift */; };
@@ -114,6 +117,9 @@
 		2E0378DD23620332000BA973 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		2E0378E5236209A8000BA973 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		2E0378E823620D14000BA973 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		2E04FD9C238AC4EB006B2F91 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
+		2E04FD9E238AC577006B2F91 /* ChangeEmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailModel.swift; sourceTree = "<group>"; };
+		2E04FDA0238AD668006B2F91 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2E1DA3A0237D9D4B00B5F73B /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		2E1DA3A2237D9FA200B5F73B /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		2E1DA3A4237DA02400B5F73B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -404,6 +410,9 @@
 				2E1DA3A9237DA07500B5F73B /* Response.swift */,
 				2E66CCB8238015C500A74F45 /* AuthModels.swift */,
 				2E66CCBA2380163D00A74F45 /* CityModel.swift */,
+				2E04FD9C238AC4EB006B2F91 /* ChangePasswordModel.swift */,
+				2E04FD9E238AC577006B2F91 /* ChangeEmailModel.swift */,
+				2E04FDA0238AD668006B2F91 /* UserModel.swift */,
 			);
 			path = CodableModels;
 			sourceTree = "<group>";
@@ -864,6 +873,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E66CCAB237EEE8900A74F45 /* WelcomeVM.swift in Sources */,
+				2E04FD9D238AC4EB006B2F91 /* ChangePasswordModel.swift in Sources */,
 				2E014E392383441400B3AABD /* ImagePicker.swift in Sources */,
 				2E66CC8B237ECD7F00A74F45 /* EmailValidator.swift in Sources */,
 				2E66CCAF237F5CF100A74F45 /* TableViewController.swift in Sources */,
@@ -880,6 +890,7 @@
 				2E66CCA9237EEE5800A74F45 /* PWelcomeVM.swift in Sources */,
 				2E66CC88237ECD5900A74F45 /* PValidator.swift in Sources */,
 				2EAE6D2023819A6A00D4B867 /* CityCellVM.swift in Sources */,
+				2E04FDA1238AD668006B2F91 /* UserModel.swift in Sources */,
 				2EAE6CFD2380903200D4B867 /* FeedVM.swift in Sources */,
 				2E1DA3A1237D9D4B00B5F73B /* ShadowView.swift in Sources */,
 				2EE95BF5236626AB000A5AFB /* FeedCell.swift in Sources */,
@@ -904,6 +915,7 @@
 				2E66CCBD2380293300A74F45 /* UIViewController+Extension.swift in Sources */,
 				2E66CC99237EE3BD00A74F45 /* LoginVM.swift in Sources */,
 				2E014E292383317400B3AABD /* PEditProfileCellVM.swift in Sources */,
+				2E04FD9F238AC577006B2F91 /* ChangeEmailModel.swift in Sources */,
 				2EABB9F6235D1C2D002AD930 /* AppDelegate.swift in Sources */,
 				2EE95BF723662710000A5AFB /* NibLoadable.swift in Sources */,
 				2E014E2E23833BAD00B3AABD /* ChangeProfileVC.swift in Sources */,

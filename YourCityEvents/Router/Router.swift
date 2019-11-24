@@ -10,12 +10,6 @@ import UIKit
 
 class Router {
     
-    private static let authNC = { () -> UINavigationController in
-        let nc = UINavigationController()
-        nc.isNavigationBarHidden = true
-        return nc
-    }()
-    
     static func createRootWindow() -> UIWindow {
         return Router.showScreenAsRoot(WelcomeVC(), viewModel: WelcomeVM())
     }
@@ -65,28 +59,20 @@ class Router {
     static func showEditProfile() {
         guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
         guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
-        guard let _ = navVC.topViewController as? ProfileVC else {
+        if let _ = navVC.topViewController as? ProfileVC {
+            navVC.pushViewController(EditProfileVC(EditProfileVM()), animated: true)
+        }else {
+            navVC.popViewController(animated: true)
+        }
+    }
+    
+    static func showChangeController(_ type: ChangeProfileType) {
+        guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
+        guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
+        guard let _ = navVC.topViewController as? EditProfileVC else {
             return
         }
-        navVC.pushViewController(EditProfileVC(EditProfileVM()), animated: true)
-    }
-    
-    static func showChangeEmailController() {
-          guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
-          guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
-          guard let _ = navVC.topViewController as? EditProfileVC else {
-              return
-          }
-        navVC.pushViewController(ChangeProfileVC(ChangeProfileVM(.email)), animated: true)
-    }
-    
-    static func showChangePasswordController() {
-          guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
-          guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
-          guard let _ = navVC.topViewController as? EditProfileVC else {
-              return
-          }
-        navVC.pushViewController(ChangeProfileVC(ChangeProfileVM(.password)), animated: true)
+        navVC.pushViewController(ChangeProfileVC(ChangeProfileVM(type)), animated: true)
     }
     
     static func dismissVC(_ block: (() -> Void)?) {

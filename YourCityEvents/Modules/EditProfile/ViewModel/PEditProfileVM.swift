@@ -11,5 +11,8 @@ import UIKit
 protocol PEditProfileVM: PTableViewModel {
     var callBackOnPicker: (()->())? { get set }
     var callBackOnUpdateDataSource: (()->())? { get set }
+    var callBackOnLogOut: (()->())? { get set }
+    var callBackOnShowHud: (() -> ())? {get set}
+    var callBackOnDismissHud: (() -> ())? {get set}
     func updateWith(_ image: UIImage)
 }

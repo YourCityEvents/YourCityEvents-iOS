@@ -16,6 +16,7 @@ class AvatarCell: TableViewCell {
         super.setupUI()
         guard let model = viewModel as? PAvatarCellVM else { return }
         userImageView.image = model.getImage()
+        selectionStyle = .none
     }
     
     @IBAction func changeAvatarAction() {

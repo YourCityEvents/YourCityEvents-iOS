@@ -8,11 +8,13 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import SVProgressHUD
 
 class ChangeProfileVC: ViewController {
     
     @IBOutlet weak var firstField: SkyFloatingLabelTextField!
     @IBOutlet weak var secondField: SkyFloatingLabelTextField!
+    @IBOutlet weak var titleLabel: UILabel!
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,7 @@ class ChangeProfileVC: ViewController {
     }
     
     private func configure() {
-        guard  let model = viewModel as? ChangeProfileVM else { return }
+        guard let model = viewModel as? ChangeProfileVM else { return }
         firstField.selectedLineColor = UIColor(named: "MainBlue") ?? UIColor()
         firstField.selectedTitleColor = UIColor(named: "Grey") ?? UIColor()
         firstField.lineColor = UIColor(named: "Grey") ?? UIColor()
@@ -34,16 +36,30 @@ class ChangeProfileVC: ViewController {
         
         switch model.type {
         case .email:
+            titleLabel.text = "Change email"
             firstField.placeholder = "New email"
             firstField.title = "New email"
             secondField.placeholder = "Current password"
             secondField.title = "Current password"
         case .password:
+            titleLabel.text = "Change password"
             firstField.isSecureTextEntry = true
             firstField.placeholder = "Current password"
             firstField.title = "Current password"
             secondField.placeholder = "New password"
             secondField.title = "New password"
+        }
+        
+        model.callBackOnShowHud = {
+            SVProgressHUD.show()
+        }
+        
+        model.callBackOnDismissHud = {
+            SVProgressHUD.dismiss()
+        }
+        
+        model.callBackOnError = { [weak self] error in
+            self?.show(error: error)
         }
     }
 }
@@ -52,7 +68,16 @@ class ChangeProfileVC: ViewController {
 extension ChangeProfileVC {
     
     @IBAction func closeAction() {
-        self.navigationController?.popViewController(animated: true)
-
+        Router.showEditProfile()
+    }
+    
+    @IBAction func doneAction() {
+        guard  let model = viewModel as? ChangeProfileVM else { return }
+        switch model.type {
+        case .email:
+            model.updateEmail(firstField.text, secondField.text)
+        case .password:
+            model.updatePassword(firstField.text, secondField.text)
+        }
     }
 }

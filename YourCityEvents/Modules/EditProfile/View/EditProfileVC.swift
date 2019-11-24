@@ -26,6 +26,15 @@ extension EditProfileVC {
         model.callBackOnPicker = { [weak self] in
             self?.imagePicker.present(from: self?.view ?? UIView())
         }
+        model.callBackOnLogOut = { [weak self] in
+            let actionSheet = UIAlertController(title: "Log Out", message: "Are you sure?", preferredStyle: .actionSheet)
+            actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            actionSheet.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [weak self] _ in
+                User.clear()
+                Router.showLoginInController()
+            }))
+            self?.present(actionSheet, animated: true, completion: nil)
+        }
         model.callBackOnUpdateDataSource = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
@@ -39,6 +48,7 @@ extension EditProfileVC {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
     }
 
 }

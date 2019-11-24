@@ -9,7 +9,7 @@
 import Foundation
 import SwiftKeychainWrapper
 
-struct UserModel {
+struct UserSensitiveModel {
     let login: String
     let password: String
     let token: String
@@ -17,12 +17,12 @@ struct UserModel {
 
 struct User {
     
-    static private var _current: UserModel?
+    static private var _current: UserSensitiveModel?
     
-    static var current: UserModel? {
+    static var current: UserSensitiveModel? {
         guard let cachedUser = _current else {
             if let login = KeychainWrapper.standard.string(forKey: "login"), let password = KeychainWrapper.standard.string(forKey: "password"), let token = KeychainWrapper.standard.string(forKey: "token") {
-                _current = UserModel(login: login, password: password, token: token)
+                _current = UserSensitiveModel(login: login, password: password, token: token)
             }
             return _current
         }
@@ -50,7 +50,7 @@ struct User {
     
     // MARK: - Save / Clear
     @discardableResult
-    static func save(model: UserModel) -> Bool {
+    static func save(model: UserSensitiveModel) -> Bool {
         var saveSuccessful = true
         saveSuccessful = saveSuccessful && KeychainWrapper.standard.set(model.login, forKey: "login")
         saveSuccessful = saveSuccessful && KeychainWrapper.standard.set(model.password, forKey: "password")

@@ -54,6 +54,9 @@ open class ImagePicker: NSObject {
             alertController.addAction(action)
         }
         
+        let closeAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(closeAction)
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
             alertController.popoverPresentationController?.sourceView = sourceView
             alertController.popoverPresentationController?.sourceRect = sourceView.bounds

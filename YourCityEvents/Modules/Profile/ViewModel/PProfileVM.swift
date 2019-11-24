@@ -9,5 +9,7 @@
 import Foundation
 
 protocol PProfileVM: PViewControllerViewModel {
+    var callBackOnUserModel: ((_ user: UserModel) -> ())? { get set }
     func showEditProfile()
+    func getUserModel() 
 }

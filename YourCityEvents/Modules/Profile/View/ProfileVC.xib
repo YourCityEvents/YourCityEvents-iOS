@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="YourCityEvents" customModuleProvider="target">
             <connections>
+                <outlet property="cityLabel" destination="rCg-eb-ek0" id="Fip-Ds-Ch8"/>
+                <outlet property="fullNameLabel" destination="vLc-uC-hDV" id="NgA-ej-wnf"/>
+                <outlet property="headerView" destination="5UE-bi-1Lt" id="ma4-yR-IqH"/>
                 <outlet property="tableView" destination="l9X-hb-2Ub" id="cDf-Wv-N3y"/>
                 <outlet property="view" destination="iN0-l3-epB" id="O8N-Ji-0Np"/>
             </connections>

@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="firstField" destination="lrn-30-13J" id="8Lv-vC-yHT"/>
                 <outlet property="secondField" destination="JkI-cb-Ud3" id="mC1-G4-IhC"/>
+                <outlet property="titleLabel" destination="op1-e2-2vY" id="E0G-MY-ZLc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2bq-WO-7lC"/>
             </connections>
         </placeholder>
@@ -74,6 +75,9 @@
                             <state key="normal" title="Done">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="doneAction" destination="-1" eventType="touchUpInside" id="LFM-w2-HSZ"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op1-e2-2vY">
                             <rect key="frame" x="186" y="10" width="42" height="20.5"/>

@@ -61,7 +61,7 @@ class SignUpVM: PSignUpVM {
             case .success(let response):
                 print(response)
                 DispatchQueue.main.async {
-                    User.save(model: UserModel(login: model.email, password: model.password, token: response.token))
+                    User.save(model: UserSensitiveModel(login: model.email, password: model.password, token: response.token))
                     Router.showTabBarController()
                 }
             case .failure(let error):

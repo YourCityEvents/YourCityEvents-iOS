@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ProfileVC: ViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var bioTextView: UITextView!
+    @IBOutlet weak var headerView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +33,23 @@ class ProfileVC: ViewController {
 extension ProfileVC {
     
     fileprivate func configure() {
+        guard var model = viewModel as? PProfileVM else {
+            return
+        }
+        SVProgressHUD.show()
+        headerView.isHidden = true
+        tableView.isHidden = true
+        model.getUserModel()
+        model.callBackOnUserModel = { [weak self] model in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+                self?.fullNameLabel.text = model.fullName
+                self?.cityLabel.text = model.city.nameEn
+                self?.headerView.isHidden = false
+                self?.tableView.isHidden = false
+                self?.tableView.reloadData()
+            }
+        }
         configureTableView()
     }
     
