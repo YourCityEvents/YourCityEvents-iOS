@@ -10,6 +10,7 @@ import UIKit
 import SVProgressHUD
 
 class LoginVC: ViewController {
+    
     @IBOutlet weak var loginView: InputView!{ didSet {loginView.validator = EmailValidator()}}
     @IBOutlet weak var passwordView: InputView!{didSet{passwordView.validator = PasswordValidator()}}
     

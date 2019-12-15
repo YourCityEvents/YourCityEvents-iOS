@@ -17,5 +17,5 @@ struct UpdateImageModel: Codable {
 }
 
 extension EndpointCollection {
-    static let updateUserImage = Endpoint(method: .PUT, pathEnding: "User/upload_image")
+    static let updateUserImage = Endpoint(method: .PUT, pathEnding: "User/uploadImage")
 }

@@ -14,10 +14,8 @@ class ProfileVC: ViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var bioTextView: UITextView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,17 +40,20 @@ extension ProfileVC {
         tableView.isHidden = true
         profileImageView.cornerRadius = 40
         model.getUserModel()
+        profileImageView.contentMode = .scaleAspectFill
         model.callBackOnUserModel = { [weak self] model in
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
                 self?.fullNameLabel.text = model.fullName
                 self?.cityLabel.text = model.city.nameEn
-                if let url = model.imageUrl {
-                    self?.profileImageView.downloaded(from: url, contentMode: .scaleAspectFill)
-                }
                 self?.headerView.isHidden = false
                 self?.tableView.isHidden = false
                 self?.tableView.reloadData()
+            }
+        }
+        model.callBackOnImage = { [weak self] image in
+            DispatchQueue.main.async {
+                self?.profileImageView.image = image
             }
         }
         configureTableView()

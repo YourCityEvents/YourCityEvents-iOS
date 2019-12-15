@@ -43,6 +43,7 @@ class InputView: XibView {
         super.commonInit()
         ivPrivace.addTapGestureRecognizer(target: self, action: #selector(changePrivace))
         tfContent.delegate = self
+        vWhite.borderColor = UIColor(named: "BackgroundGrey")
         self.translatesAutoresizingMaskIntoConstraints = false
     }
     @objc private func changePrivace() {
@@ -54,13 +55,17 @@ class InputView: XibView {
     }
     func notValideText() {
         vWhite.borderColor = UIColor.red
-        vWhite.backgroundColor = .white
+//        vWhite.backgroundColor = .white
+        vWhite.backgroundColor = UIColor(named: "BackgroundGrey")
         lErrorMassage.isHidden = false
         ivPrivace.image = #imageLiteral(resourceName: "0.2RedEye.pdf")
     }
     func valideText() {
-        vWhite.borderColor = #colorLiteral(red: 0.8745098039, green: 0.8745098039, blue: 0.8745098039, alpha: 1)
-        vWhite.backgroundColor = .white
+//        vWhite.borderColor = #colorLiteral(red: 0.8745098039, green: 0.8745098039, blue: 0.8745098039, alpha: 1)
+//   vWhite.backgroundColor = UIColor(named: "PlaceholderColor")
+        vWhite.borderColor = UIColor(named: "BackgroundGrey")
+//        vWhite.backgroundColor = .white
+        vWhite.backgroundColor =  UIColor(named: "BackgroundGrey")
         lErrorMassage.isHidden = true
         ivPrivace.image = #imageLiteral(resourceName: "0.2Eye.pdf")
     }

@@ -81,6 +81,7 @@ class EditProfileVM: PEditProfileVM {
         let vm = AvatarCellVM(nil, image) { [weak self] in
             self?.callBackOnPicker?()
         }
+        let _ = DataBase.newUser(userId: user.id , fullname: user.fullName, image: image)
         sourceArray.insert(vm, at: 0)
         callBackOnUpdateDataSource?()
     }

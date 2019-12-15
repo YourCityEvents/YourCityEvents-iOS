@@ -49,6 +49,15 @@ class Router {
         setRoot(viewController: vc)
     }
     
+    static func showEventDetailsVC() {
+        guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
+        guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
+        let vc = EventDetailsVC()
+        if let _ = navVC.topViewController as? FeedVC {
+            navVC.pushViewController(vc, animated: true)
+        }
+    }
+    
     static func showLoginInController() {
         let vc = LoginVC(LoginVM())
         vc.modalPresentationStyle = .overFullScreen

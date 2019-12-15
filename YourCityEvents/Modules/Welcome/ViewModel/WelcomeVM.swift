@@ -13,7 +13,7 @@ class WelcomeVM: PWelcomeVM {
     func startFlow() {
         if let user = User.current {
             let model = LoginModel(email: user.login, password: user.password)
-            networking.performRequest(to: EndpointCollection.login, with: model) { [weak self] (result: Result<AuthResponse>) in
+            networking.performRequest(to: EndpointCollection.login, with: model) { (result: Result<AuthResponse>) in
                 switch result {
                 case .success(let response):
                     User.update(token: response.token)

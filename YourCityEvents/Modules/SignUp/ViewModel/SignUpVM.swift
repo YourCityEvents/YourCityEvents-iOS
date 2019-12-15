@@ -59,7 +59,6 @@ class SignUpVM: PSignUpVM {
             self?.callBackOnDismissHud?()
             switch result {
             case .success(let response):
-                print(response)
                 DispatchQueue.main.async {
                     User.save(model: UserSensitiveModel(login: model.email, password: model.password, token: response.token))
                     Router.showTabBarController()

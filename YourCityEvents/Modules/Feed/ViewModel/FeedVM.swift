@@ -9,26 +9,32 @@
 import Foundation
 
 class FeedVM: PFeedVM {
+    
     var onUpdateDataSource: (() -> ())?
+    private let networking = NetworkingService()
     
     var sourceArray: [PTableViewCellModel] = []
     init() {
-        for item in CredentialsHelper.getList() {
+        self.sourceArray.removeAll()
+        for item in CredentialsHelper.getListNew() {
             let vm = FeedCellModel(item) { (model) in
                 print(model)
+                Router.showEventDetailsVC()
+//                showEventDetailsVC
             }
-            sourceArray.append(vm)
+            self.sourceArray.append(vm)
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.sourceArray.removeAll()
-            for item in CredentialsHelper.getListNew() {
-                let vm = FeedCellModel(item) { (model) in
-                    print(model)
-                }
-                self.sourceArray.append(vm)
+        self.onUpdateDataSource?()
+    }
+    
+    func getFeed() {
+        networking.performRequest(to: EndpointCollection.getEvents) { [weak self] (result: Result<EventsModelResponse>) in
+            switch result {
+            case .success(let response):
+                print(response.events)
+            case .failure(let error):
+                print(error)
             }
-            self.onUpdateDataSource?()
         }
     }
 }
@@ -46,5 +52,4 @@ class CredentialsHelper {
                 FeedCellModelObject(name: "test",descriptions: "descrep"),
                 FeedCellModelObject(name: "test",descriptions: "descrep")]
     }
-
 }
