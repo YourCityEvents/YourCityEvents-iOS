@@ -49,10 +49,10 @@ class Router {
         setRoot(viewController: vc)
     }
     
-    static func showEventDetailsVC() {
+    static func showEventDetailsVC(_ event: EventModel) {
         guard let viewC = Router.getRootViewController() as? UITabBarController else { return }
         guard let navVC = viewC.selectedViewController as? UINavigationController else { return }
-        let vc = EventDetailsVC()
+        let vc = EventDetailsVC(EventDetailsVM(event))
         if let _ = navVC.topViewController as? FeedVC {
             navVC.pushViewController(vc, animated: true)
         }

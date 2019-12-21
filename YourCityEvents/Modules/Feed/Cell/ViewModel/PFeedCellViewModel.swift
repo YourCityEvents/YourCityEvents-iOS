@@ -6,10 +6,12 @@
 //  Copyright © 2019 Yaroslav Zarechnyy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol PFeedCellViewModel: PTableViewCellModel{
     func getFeedName() -> String?
     func getDescription() -> String?
+    func getStringDate() -> String?
+    func getImageUrl() -> String?
     func onSelect()
 }

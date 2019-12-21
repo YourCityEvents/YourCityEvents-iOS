@@ -11,11 +11,18 @@ import UIKit
 class EditProfileVC: TableViewController {
     
     private lazy var imagePicker = ImagePicker(presentationController: self, delegate: self)
+    
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         configure()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(close)))
+//        self.view.addTapGestureRecognizer(target: self, action: #selector(close))
     }
     
+    @objc func close() {
+        
+    }
 }
 
 extension EditProfileVC {
@@ -29,7 +36,7 @@ extension EditProfileVC {
         model.callBackOnLogOut = { [weak self] in
             let actionSheet = UIAlertController(title: "Log Out", message: "Are you sure?", preferredStyle: .actionSheet)
             actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            actionSheet.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [weak self] _ in
+            actionSheet.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { _ in
                 User.clear()
                 Router.showLoginInController()
             }))

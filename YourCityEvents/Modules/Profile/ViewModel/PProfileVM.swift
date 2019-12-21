@@ -8,9 +8,13 @@
 
 import UIKit
 
-protocol PProfileVM: PViewControllerViewModel {
+protocol PProfileVM: PTableViewModel {
     var callBackOnUserModel: ((_ user: UserModel) -> ())? { get set }
-    var callBackOnImage: ( (_ image: UIImage) -> ())? { get set }
+    var callBackOnImage: ((_ image: UIImage) -> ())? { get set }
+    var callBackOnError: ((_ error: Error) -> ())? { get set }
+    var callBackOnDelete: (() -> ())? { get set }
+    var callBackOnUpdateDataSource: (() -> ())? { get set }
+    func deleteEvent(for indexPath: Int)
     func showEditProfile()
     func getUserModel()
 }

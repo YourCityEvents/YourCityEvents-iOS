@@ -9,9 +9,9 @@
 import UIKit
 import SVProgressHUD
 
-class ProfileVC: ViewController {
+class ProfileVC: TableViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var headerView: UIView!
@@ -41,6 +41,16 @@ extension ProfileVC {
         profileImageView.cornerRadius = 40
         model.getUserModel()
         profileImageView.contentMode = .scaleAspectFill
+        model.callBackOnUpdateDataSource = {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        model.callBackOnError = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.show(error: error)
+            }
+        }
         model.callBackOnUserModel = { [weak self] model in
             DispatchQueue.main.async {
                 SVProgressHUD.dismiss()
@@ -79,42 +89,18 @@ extension ProfileVC {
     }
 }
 
-extension ProfileVC: UITableViewDelegate {
-  
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           tableView.deselectRow(at: indexPath, animated: true)
+extension ProfileVC {
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            print(indexPath.row)
+            guard let model = viewModel as? ProfileVM else { return }
+            model.deleteEvent(for: indexPath.row)
+        }
     }
 }
 
-extension ProfileVC: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
-        view.backgroundColor = .white
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Organizes"
-        label.textColor = .black
-        view.addSubview(label)
-        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        return view
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.reuseIdentifier, for: indexPath)
-        return UITableViewCell()
-    }
-}

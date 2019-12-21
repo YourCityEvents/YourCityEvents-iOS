@@ -9,21 +9,45 @@
 import UIKit
 
 class ProfileVM: PProfileVM {
+    var callBackOnUpdateDataSource: (() -> ())?
+    var callBackOnDelete: (() -> ())?
+    var callBackOnError: ((Error) -> ())?
     var callBackOnImage: ((UIImage) -> ())?
     var callBackOnUserModel: ((UserModel) -> ())?
     private let networking = NetworkingService()
     private var user: UserModel!
-    
+    var sourceArray: [PTableViewCellModel] = []
+        
     func getUserModel() {
          networking.performRequest(to: EndpointCollection.getUser) { [weak self] (result: Result<UserResponseModel>) in
             switch result {
             case .success(let response):
+                if let events = response.user.hostingEvents {
+                    for event in events {
+                        let vm = FeedCellModel(event) { (event) in
+                        }
+                        self?.sourceArray.append(vm)
+                    }
+                }
                 self?.callBackOnUserModel?(response.user)
                 self?.user = response.user
                 self?.updateUserModel()
                 self?.downloadImage(self?.user.imageUrl)
-            case .failure(_):
-                break
+            case .failure(let error):
+                self?.callBackOnError?(error)
+            }
+        }
+    }
+    
+    func deleteEvent(for indexPath: Int) {
+        guard let event = sourceArray[indexPath] as? FeedCellModel else { return }
+        networking.performRequest(to: EndpointCollection.deleteEvent(with: event.content.id ?? "")) { [weak self] (result: Result<Empty>) in
+            switch result {
+            case .success(_):
+                self?.sourceArray.remove(at: indexPath)
+                self?.callBackOnUpdateDataSource?()
+            case .failure(let error):
+                self?.callBackOnError?(error)
             }
         }
     }

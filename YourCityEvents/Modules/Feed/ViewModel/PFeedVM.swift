@@ -10,5 +10,6 @@ import Foundation
 
 protocol PFeedVM: PTableViewModel {
     var onUpdateDataSource: (() -> ())? { get set }
+    var onError: ((Error) -> ())? { get set }
     func getFeed()
 }

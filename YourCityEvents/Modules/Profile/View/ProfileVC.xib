@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="YourCityEvents" customModuleProvider="target">
             <connections>
@@ -15,7 +23,7 @@
                 <outlet property="fullNameLabel" destination="vLc-uC-hDV" id="NgA-ej-wnf"/>
                 <outlet property="headerView" destination="5UE-bi-1Lt" id="ma4-yR-IqH"/>
                 <outlet property="profileImageView" destination="iU3-7q-kAW" id="IId-zH-DTX"/>
-                <outlet property="tableView" destination="l9X-hb-2Ub" id="cDf-Wv-N3y"/>
+                <outlet property="tableView" destination="l9X-hb-2Ub" id="cet-nz-7bO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="O8N-Ji-0Np"/>
             </connections>
         </placeholder>
@@ -25,7 +33,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l9X-hb-2Ub">
-                    <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                    <rect key="frame" x="0.0" y="118" width="375" height="549"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UE-bi-1Lt">
@@ -53,17 +61,17 @@
                             </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wfe-ft-Gny">
-                            <rect key="frame" x="121" y="35.5" width="217" height="49"/>
+                            <rect key="frame" x="121" y="34.5" width="217" height="51.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLc-uC-hDV">
-                                    <rect key="frame" x="0.0" y="0.0" width="217" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="217" height="23.5"/>
+                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCg-eb-ek0">
-                                    <rect key="frame" x="0.0" y="28.5" width="217" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="0.0" y="31.5" width="217" height="20"/>
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="17"/>
                                     <color key="textColor" name="Grey"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -99,7 +107,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5UE-bi-1Lt" secondAttribute="trailing" id="IhX-Sw-4Yj"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l9X-hb-2Ub" secondAttribute="trailing" id="OIF-Yo-gTt"/>
                 <constraint firstItem="5UE-bi-1Lt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TUZ-eT-cu8"/>
-                <constraint firstItem="l9X-hb-2Ub" firstAttribute="top" secondItem="5UE-bi-1Lt" secondAttribute="bottom" id="Tkk-Gq-Shb"/>
+                <constraint firstItem="l9X-hb-2Ub" firstAttribute="top" secondItem="5UE-bi-1Lt" secondAttribute="bottom" constant="8" id="Tkk-Gq-Shb"/>
                 <constraint firstItem="Ljm-Ow-Dni" firstAttribute="centerX" secondItem="5UE-bi-1Lt" secondAttribute="centerX" id="dID-IQ-3au"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="l9X-hb-2Ub" secondAttribute="bottom" id="ng2-5n-ZEh"/>
                 <constraint firstItem="5UE-bi-1Lt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="rTK-rJ-vPw"/>

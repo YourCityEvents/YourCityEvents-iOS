@@ -20,6 +20,11 @@ class EditProfileCell: TableViewCell {
         iconImageView.image = model.getIcon()
         titleLabel.text = model.getTitle()
         arrowImageView.isHidden = model.isHideArrow()
+        if model.isHideArrow() {
+            titleLabel.textColor = .red
+        } else {
+            titleLabel.textColor = .black
+        }
     }
     
     @objc private func eventSelect() {

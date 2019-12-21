@@ -49,10 +49,8 @@ class EditProfileVM: PEditProfileVM {
         type.0 = .logout
         type.1 = EditProfileCellTypeInfo(image: UIImage(named: "logOut")!, title: "Logout", isHiddenArrow: true)
         let logoutVM = EditProfileCellVM(type) { [weak self] (selected) in
-            
             self?.callBackOnLogOut?()
         }
-        
         sourceArray.append(cityVM)
         sourceArray.append(emailVM)
         sourceArray.append(passVM)

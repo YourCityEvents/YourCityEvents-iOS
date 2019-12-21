@@ -8,12 +8,21 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateEventVC" customModule="YourCityEvents" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="fZI-3A-hSr" id="Tz4-lV-yVD"/>
                 <outlet property="dateTextField" destination="x1d-NX-SCl" id="Dc3-p4-yTh"/>
                 <outlet property="descriptionTextView" destination="iAH-T4-osO" id="0bR-PD-rOS"/>
+                <outlet property="eventImageView" destination="kB5-DT-RLK" id="Rxd-2z-kS5"/>
                 <outlet property="locationInputView" destination="G0a-3O-MDY" id="0tV-KP-aKO"/>
                 <outlet property="priceInputView" destination="9oR-Fi-7yq" id="Xc9-IG-Nll"/>
                 <outlet property="startTimeTextField" destination="Uli-fG-TlK" id="vUs-y3-bX1"/>
@@ -27,12 +36,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="event_icon" translatesAutoresizingMaskIntoConstraints="NO" id="kB5-DT-RLK">
-                    <rect key="frame" x="0.0" y="40" width="320" height="346"/>
+                    <rect key="frame" x="0.0" y="40" width="320" height="173"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="173" id="E38-xG-xOe"/>
+                    </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLV-dU-rPO">
-                    <rect key="frame" x="0.0" y="40" width="320" height="123"/>
+                    <rect key="frame" x="0.0" y="40" width="320" height="130"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="123" id="mN0-a3-bom"/>
+                        <constraint firstAttribute="height" constant="130" id="mN0-a3-bom"/>
                     </constraints>
                     <connections>
                         <action selector="addEventPhotoAction" destination="-1" eventType="touchUpInside" id="w4m-k8-91b"/>
@@ -42,22 +54,22 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8au-HF-mHf">
-                            <rect key="frame" x="260" y="0.0" width="40" height="40"/>
+                            <rect key="frame" x="240" y="-2.5" width="60" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="lon-gA-eG6"/>
-                                <constraint firstAttribute="width" constant="40" id="ofu-Dq-KDA"/>
+                                <constraint firstAttribute="height" constant="45" id="lon-gA-eG6"/>
+                                <constraint firstAttribute="width" constant="60" id="ofu-Dq-KDA"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
                             <state key="normal" title="Done">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" name="MainBlue"/>
                             </state>
                             <connections>
                                 <action selector="createEvent" destination="-1" eventType="touchUpInside" id="QFE-pU-Vzt"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12l-JI-jaW">
-                            <rect key="frame" x="139" y="10" width="42" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12l-JI-jaW">
+                            <rect key="frame" x="97.5" y="7" width="125.5" height="26"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="22"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -96,14 +108,14 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="needHelper" value="NO"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="aaaaaa" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="iAH-T4-osO">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="iAH-T4-osO">
                                                     <rect key="frame" x="25" y="91" width="270" height="100"/>
                                                     <color key="backgroundColor" name="BackgroundGrey"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="VGN-jV-uiD"/>
                                                     </constraints>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="173-lu-kNK">
@@ -116,7 +128,7 @@
                                                                 <constraint firstAttribute="height" constant="44" id="GW7-vz-pYB"/>
                                                                 <constraint firstAttribute="width" constant="110" id="MgU-3d-lon"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-NX-SCl">
@@ -126,7 +138,7 @@
                                                                 <constraint firstAttribute="height" constant="44" id="6Sa-i7-K2E"/>
                                                                 <constraint firstAttribute="width" constant="110" id="f7Q-Va-nWj"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                     </subviews>
@@ -236,6 +248,9 @@
         <image name="event_icon" width="375" height="173"/>
         <namedColor name="BackgroundGrey">
             <color red="0.9649999737739563" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MainBlue">
+            <color red="0.14499999582767487" green="0.10999999940395355" blue="0.63499999046325684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

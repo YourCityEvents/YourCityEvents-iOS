@@ -18,6 +18,8 @@ class FeedVC: TableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        guard let model = viewModel as? PFeedVM else { return }
+        model.getFeed()
     }
 }
 
@@ -25,11 +27,15 @@ extension FeedVC {
     
     fileprivate func configure() {
         guard var model = viewModel as? PFeedVM else { return }
-        model.getFeed()
         configureTableView()
         model.onUpdateDataSource = {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+            }
+        }
+        model.onError = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.show(error: error)
             }
         }
     }

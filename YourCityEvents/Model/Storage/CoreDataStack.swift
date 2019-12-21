@@ -92,4 +92,14 @@ extension CoreDataStack {
         let predicate = NSPredicate(format: "id = %@", id)
         return fetchOne(predicate: predicate)
     }
+    
+    func addEvent(_ event: EventModel, image: UIImage) -> EventCached? {
+        let cachedEvent = EventCached(context: persistentContainer.viewContext)
+        cachedEvent.id = event.id
+        cachedEvent.image = image.pngData()
+        cachedEvent.title = event.title
+        cachedEvent.date = event.date
+        cachedEvent.desr = event.description
+        return nil
+    }
 }

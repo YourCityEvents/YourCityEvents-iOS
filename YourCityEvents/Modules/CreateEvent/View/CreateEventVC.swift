@@ -11,10 +11,11 @@ import SVProgressHUD
 
 class CreateEventVC: ViewController {
     
+    @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var titleInputView: InputView!
+    @IBOutlet weak var titleInputView: InputView! {didSet {titleInputView.validator = CommonValidator()}}
     @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var locationInputView: InputView!
+    @IBOutlet weak var locationInputView: InputView! {didSet {locationInputView.validator = CommonValidator()}}
     @IBOutlet weak var priceInputView: InputView!
     @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
@@ -30,12 +31,27 @@ class CreateEventVC: ViewController {
     }
     
     private func configure() {
-        
         guard var model = viewModel as? PCreateEventVM else { return }
-        
-        
-        model.callBackOnDismissHud = { 
-            SVProgressHUD.dismiss()
+        model.callBackOnShowHud = {
+            DispatchQueue.main.async {
+                SVProgressHUD.show()
+            }
+        }
+        model.callBackOnDismissHud = {
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+        }
+        model.callBackOnClearFields = { [weak self] in
+            DispatchQueue.main.async {
+                self?.eventImageView.image = UIImage(named: "event_icon")
+                self?.titleInputView.tfContent.text = nil
+                self?.descriptionTextView.text = nil
+                self?.locationInputView.tfContent.text = nil
+                self?.priceInputView.tfContent.text = nil
+                self?.dateTextField.text = nil
+                self?.startTimeTextField.text = nil
+            }
         }
         
         timeDatePicker.datePickerMode = UIDatePicker.Mode.time
@@ -46,15 +62,12 @@ class CreateEventVC: ViewController {
         startTimeTextField.inputView = timeDatePicker
         startTimeTextField.textAlignment = .center
         
-        
         datePicker.addTarget(self, action: #selector(datePickerChangedValue(_:)), for: .valueChanged)
         datePicker.datePickerMode = UIDatePicker.Mode.date
         
         dateTextField.layer.cornerRadius = 4
         dateTextField.inputView = datePicker
-//        
-//        testView.layer.cornerRadius = 8
-//        testView.layer.maskedCorners = [CACornerMask.layerMaxXMinYCorner, CACornerMask.layerMinXMinYCorner]
+
         contentView.layer.cornerRadius = 8
         contentView.layer.maskedCorners = [CACornerMask.layerMaxXMinYCorner, CACornerMask.layerMinXMinYCorner]
     }
@@ -93,7 +106,7 @@ class CreateEventVC: ViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
         dateFormatter.timeZone = TimeZone.current
-        dateFormatter.dateFormat = "dd:MM:yyyy "
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.string(from: date)
     }
 
@@ -102,7 +115,7 @@ class CreateEventVC: ViewController {
 extension CreateEventVC: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
         guard let image = image, let model = viewModel as? PCreateEventVM else { return }
-        SVProgressHUD.show()
         model.uploadImage(image)
+        eventImageView.image = image
     }
 }

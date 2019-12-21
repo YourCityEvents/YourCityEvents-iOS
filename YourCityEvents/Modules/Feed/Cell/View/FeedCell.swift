@@ -24,6 +24,14 @@ class FeedCell: TableViewCell {
         contentView.addTapGestureRecognizer(target: self, action: #selector(eventSelect))
         titleLabel.text = model.getFeedName()
         locationLabel.text = model.getDescription()
+        dateLabel.text = model.getStringDate()
+        if let url = model.getImageUrl() {
+            eventImageView.downloaded(from: url)
+        } else {
+            DispatchQueue.main.async {
+                self.eventImageView.image = UIImage(named: "welcome")
+            }
+        }
     }
     
     @objc private func eventSelect() {

@@ -87,6 +87,8 @@
 		2EAE6D1A238193D800D4B867 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAE6D19238193D800D4B867 /* CityCell.xib */; };
 		2EAE6D1E23819A4600D4B867 /* PCityCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE6D1D23819A4600D4B867 /* PCityCellVM.swift */; };
 		2EAE6D2023819A6A00D4B867 /* CityCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAE6D1F23819A6A00D4B867 /* CityCellVM.swift */; };
+		2EC1B3E123AD962E00EA41A5 /* PEventDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B3E023AD962E00EA41A5 /* PEventDetailsVM.swift */; };
+		2EC1B3E323AD963A00EA41A5 /* EventDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1B3E223AD963A00EA41A5 /* EventDetailsVM.swift */; };
 		2EE039082394297D00293130 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE039072394297D00293130 /* CreateEventVC.swift */; };
 		2EE0390A2394298800293130 /* CreateEventVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE039092394298800293130 /* CreateEventVC.xib */; };
 		2EE0390E239429A200293130 /* PCreateEventVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE0390D239429A200293130 /* PCreateEventVM.swift */; };
@@ -99,6 +101,8 @@
 		2EE95C0323662D75000A5AFB /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EE95C0223662D75000A5AFB /* ProfileVC.xib */; };
 		2EEAC22123A69FB800663F00 /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEAC22023A69FB800663F00 /* EventDetailsVC.swift */; };
 		2EEAC22323A6A06000663F00 /* EventDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EEAC22223A6A06000663F00 /* EventDetailsVC.xib */; };
+		2EF51C7A23AD9FAC001FFF60 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EF51C7923AD9FA8001FFF60 /* Inter-SemiBold.ttf */; };
+		2EF51C7B23AD9FAC001FFF60 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EF51C7823AD9FA0001FFF60 /* Inter-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +188,8 @@
 		2EAE6D19238193D800D4B867 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		2EAE6D1D23819A4600D4B867 /* PCityCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCityCellVM.swift; sourceTree = "<group>"; };
 		2EAE6D1F23819A6A00D4B867 /* CityCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellVM.swift; sourceTree = "<group>"; };
+		2EC1B3E023AD962E00EA41A5 /* PEventDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEventDetailsVM.swift; sourceTree = "<group>"; };
+		2EC1B3E223AD963A00EA41A5 /* EventDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsVM.swift; sourceTree = "<group>"; };
 		2EE039072394297D00293130 /* CreateEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
 		2EE039092394298800293130 /* CreateEventVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventVC.xib; sourceTree = "<group>"; };
 		2EE0390D239429A200293130 /* PCreateEventVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCreateEventVM.swift; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 		2EE95C0223662D75000A5AFB /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		2EEAC22023A69FB800663F00 /* EventDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
 		2EEAC22223A6A06000663F00 /* EventDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsVC.xib; sourceTree = "<group>"; };
+		2EF51C7823AD9FA0001FFF60 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		2EF51C7923AD9FA8001FFF60 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		7D4AEA9D078788CC45309EC5 /* Pods-YourCityEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourCityEvents.release.xcconfig"; path = "Target Support Files/Pods-YourCityEvents/Pods-YourCityEvents.release.xcconfig"; sourceTree = "<group>"; };
 		9FF27AE93345322FDFDCFE28 /* Pods_YourCityEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourCityEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B660E4D5BB86282DF3DD1C69 /* Pods-YourCityEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourCityEvents.debug.xcconfig"; path = "Target Support Files/Pods-YourCityEvents/Pods-YourCityEvents.debug.xcconfig"; sourceTree = "<group>"; };
@@ -352,6 +360,8 @@
 		2E0378D42361FF84000BA973 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2EF51C7923AD9FA8001FFF60 /* Inter-SemiBold.ttf */,
+				2EF51C7823AD9FA0001FFF60 /* Inter-Regular.ttf */,
 				2E0378D52361FF84000BA973 /* Roboto-Medium.ttf */,
 			);
 			path = Fonts;
@@ -360,6 +370,7 @@
 		2E0378D8236201F5000BA973 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2EABBA01235D1C2E002AD930 /* LaunchScreen.storyboard */,
 				2E0378D6236201F0000BA973 /* Button.swift */,
 				2E1DA3A0237D9D4B00B5F73B /* ShadowView.swift */,
 				2E66CC83237ECCFA00A74F45 /* XibView.swift */,
@@ -612,7 +623,6 @@
 		2EABB9F4235D1C2D002AD930 /* YourCityEvents */ = {
 			isa = PBXGroup;
 			children = (
-				2EABBA01235D1C2E002AD930 /* LaunchScreen.storyboard */,
 				2E0378D8236201F5000BA973 /* View */,
 				2E66CCA7237EEAEC00A74F45 /* Router */,
 				2E0378CE2361FE92000BA973 /* Modules */,
@@ -687,6 +697,15 @@
 				2EAE6D1F23819A6A00D4B867 /* CityCellVM.swift */,
 			);
 			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		2EC1B3E423AD963D00EA41A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EC1B3E023AD962E00EA41A5 /* PEventDetailsVM.swift */,
+				2EC1B3E223AD963A00EA41A5 /* EventDetailsVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2EE0390B2394298B00293130 /* CreateEvent */ = {
@@ -775,6 +794,7 @@
 			isa = PBXGroup;
 			children = (
 				2EEAC22423A6A06700663F00 /* View */,
+				2EC1B3E423AD963D00EA41A5 /* ViewModel */,
 			);
 			path = EventDetails;
 			sourceTree = "<group>";
@@ -856,6 +876,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF51C7A23AD9FAC001FFF60 /* Inter-SemiBold.ttf in Resources */,
 				2EEAC22323A6A06000663F00 /* EventDetailsVC.xib in Resources */,
 				2EE95C0323662D75000A5AFB /* ProfileVC.xib in Resources */,
 				2EABBA03235D1C2E002AD930 /* LaunchScreen.storyboard in Resources */,
@@ -865,6 +886,7 @@
 				2EE0390A2394298800293130 /* CreateEventVC.xib in Resources */,
 				2EA617F923831E6F003F10B7 /* EditProfileVC.xib in Resources */,
 				2EE95BF02366227E000A5AFB /* FeedVC.xib in Resources */,
+				2EF51C7B23AD9FAC001FFF60 /* Inter-Regular.ttf in Resources */,
 				2EAE6D0623816F2A00D4B867 /* SignUpVC.xib in Resources */,
 				2E014E3023833BCE00B3AABD /* ChangeProfileVC.xib in Resources */,
 				2EE95BF3236624B9000A5AFB /* FeedCell.xib in Resources */,
@@ -943,6 +965,7 @@
 				2E66CCA9237EEE5800A74F45 /* PWelcomeVM.swift in Sources */,
 				2E66CC88237ECD5900A74F45 /* PValidator.swift in Sources */,
 				2EAE6D2023819A6A00D4B867 /* CityCellVM.swift in Sources */,
+				2EC1B3E123AD962E00EA41A5 /* PEventDetailsVM.swift in Sources */,
 				2E04FDA1238AD668006B2F91 /* UserModel.swift in Sources */,
 				2EAE6CFD2380903200D4B867 /* FeedVM.swift in Sources */,
 				2E1DA3A1237D9D4B00B5F73B /* ShadowView.swift in Sources */,
@@ -991,6 +1014,7 @@
 				2E0378DA23620223000BA973 /* Color.swift in Sources */,
 				2E66CC93237ED25300A74F45 /* UIView+Extensions.swift in Sources */,
 				2EAE6D0423816F1E00D4B867 /* SignUpVC.swift in Sources */,
+				2EC1B3E323AD963A00EA41A5 /* EventDetailsVM.swift in Sources */,
 				2EE039082394297D00293130 /* CreateEventVC.swift in Sources */,
 				2EAE6D0B2381709500D4B867 /* PSignUpVM.swift in Sources */,
 				2E014E23238330B000B3AABD /* EditProfileCell.swift in Sources */,

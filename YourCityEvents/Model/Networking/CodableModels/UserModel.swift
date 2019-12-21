@@ -19,8 +19,8 @@ struct UserModel: Codable {
     var bio: String?
     var email: String
     var city: CityModel
-    var hostingEvents: String?
-    var visitingEvents: String?
+    var hostingEvents: [EventModel]?
+    var visitingEvents: [EventModel]?
     var imageUrl: String?
     
     var fullName: String {
